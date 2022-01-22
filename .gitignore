@@ -134,3 +134,5 @@ dmypy.json
 # large dataset files
 ./inputs/matches.csv
 ./inputs/match_players.csv
+inputs/match_players.csv
+inputs/matches.csv
