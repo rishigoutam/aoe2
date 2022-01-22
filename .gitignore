@@ -132,7 +132,7 @@ dmypy.json
 **/.DS_Store
 
 # large dataset files
-./inputs/matches.csv
-./inputs/match_players.csv
 inputs/match_players.csv
+inputs/match_players_big.csv
 inputs/matches.csv
+inputs/matches_big.csv
