@@ -1,2 +1,4 @@
 inputs/matches.csv filter=lfs diff=lfs merge=lfs -text
 inputs/match_players.csv filter=lfs diff=lfs merge=lfs -text
+inputs/match_players_big.csv filter=lfs diff=lfs merge=lfs -text
+inputs/matches_big.csv filter=lfs diff=lfs merge=lfs -text
