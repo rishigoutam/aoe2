@@ -104,6 +104,6 @@ with open('inputs/hd_patches.html', 'r') as hd:
 
 with open('data/hd_de_patches.csv', 'w') as f:
     writer = csv.writer(f)
-    writer.writerow(['Game', 'DateTime', 'Title', 'Has Patch Notes', 'Build ID'])
+    writer.writerow(['Game', 'DateTime', 'Title', 'Has Patch Notes', 'Patch Type', 'Patch Number', 'Changes', 'Build ID'])
     writer.writerows(get_patches(hd_patches, 'hd'))
     writer.writerows(get_patches(de_patches, 'de'))
