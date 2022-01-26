@@ -1,14 +1,14 @@
 Name,Website URL, Project Declaration
-Rishi Goutam,"Scrape:
-store.steampowered.com
-steamdb.info
+Rishi Goutam,"Dataset
+- Kaggle aoe2.net dataset to analyze balance in an RTS case study
 
-Datasets:
-kaggle age of empires de dataset","Define product strategy for a real-time strategy game developer firm. Determine how to create an RTS game that continues to draw players for many years, leading to increased IP value and long term sales
+Scraped Data
+- steamdb.info/{player-count-info-for-games} and /{patches-for-aoe2}
+- ageofempires.com/{balance-or-new-content-updates}
+- store.steampowered.com/{top-reviewed-rts-games}","Help define product strategy for a real-time strategy game developer firm through data analysis.
 
-Audience/Primary Stakeholder: 
-Head of Product, TinyStrategyGameCo
+Determine how to create an RTS game that continues to draw players for many years, potentially leading to increased sales over time and potential for paid ""sequels""/DLCs to the game
 
-Hypotheses: 
-Focusing on creating a balance/fairness will reduce customer churn or increase usage of software (players will play more or keep playing due to having a fair and competitive game)
-Creating new content through DLCs will maintain interest over time (this seems obvious...?"
+Hypotheses
+1. Focusing on creating a balance/fairness will reduce customer churn or increase usage of software (players will play more or keep playing due to having a fair and competitive game)
+2. Creating new content through DLCs will maintain interest over time"
