@@ -131,6 +131,9 @@ dmypy.json
 # macOS
 **/.DS_Store
 
+# pptx
+~$presentation.pptx
+
 # large dataset files
 data/match_players.csv
 data/match_players_big.csv
