@@ -20,7 +20,8 @@ from bs4 import BeautifulSoup as Soup
 import csv
 import os
 
-inputs_dir = 'inputs'
+inputs_dir = 'inputs/'
+out_dir = 'data/'
 
 # Steam Game App IDs
 # hardcoded names also used in rts_player_counts TODO fix
@@ -129,14 +130,15 @@ def get_patch_notes(patch_num: int = 37650) -> dict({str: list}):
     return civ_changes
 
 
-with open('inputs/de_patches.html', 'r') as de:
+with open(f'{inputs_dir}de_patches.html', 'r') as de:
     de_patches = Soup(de, 'html.parser')
-with open('inputs/hd_patches.html', 'r') as hd:
+with open(f'{inputs_dir}hd_patches.html', 'r') as hd:
     hd_patches = Soup(hd, 'html.parser')
 
-with open('data/hd_de_patches.csv', 'w') as f:
+with open(f'{out_dir}hd_de_patches.csv', 'w') as f:
     writer = csv.writer(f)
-    writer.writerow(['Game', 'DateTime', 'Title', 'Has Patch Notes', 'Patch Type', 'Patch Number', 'Balance Changes', 'Build ID'])
+    writer.writerow(
+        ['Game', 'DateTime', 'Title', 'Has Patch Notes', 'Patch Type', 'Patch Number', 'Balance Changes', 'Build ID'])
     writer.writerows(get_patches(hd_patches, 'hd'))
     writer.writerows(get_patches(de_patches, 'de'))
 
@@ -148,9 +150,8 @@ for game_id in games.keys():
             soup = Soup(steamdb_file, 'html.parser')
             update_patch_counts(soup, game_id)
 
-with open('data/patch_counts.csv', 'w') as f:
+with open(f'{out_dir}patch_counts.csv', 'w') as f:
     writer = csv.writer(f)
     writer.writerow(['steam_app_id', 'name', 'num_updates'])
     for game_id, lst in games.items():
         writer.writerow([game_id, lst[0], lst[1]])
-
