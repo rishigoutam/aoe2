@@ -18,6 +18,35 @@ AoE:HD does not have main patches labeled, so we don't have major versions unlik
 
 from bs4 import BeautifulSoup as Soup
 import csv
+import os
+
+inputs_dir = 'inputs'
+
+# Steam Game App IDs
+games = dict()
+games[933110] = ['AoE3', None]
+games[459220] = ['halo-wars', None]
+games[1466860] = ['AoE4', None]
+games[1213210] = ['command-and-conquer', None]
+games[466560] = ['northguard', None]
+games[287450] = ['rise-of-nations', None]
+games[594570] = ['total-war-warhammer', None]
+games[231430] = ['company-of-heroes', None]
+games[40950] = ['stronghold', None]
+games[813780] = ['AoE2-DE', None]
+games[221380] = ['AoE2-HD', None]
+
+
+def update_patch_counts(soup: Soup, game_id: int) -> None:
+    """
+    Counts the number of updates made to a game and stores it in the global games variable
+    :param soup: the BeautifulSoup object for the steamdb.info game website at 'https://steamdb.info/app/{game_steam_id}/patchnotes/'
+    :param game_id: the Steam App ID for a game
+    :return:
+    """
+    table = soup.find('tbody', attrs={'id': 'js-builds'})
+    table_rows = table.find_all('tr')
+    games[game_id][1] = len(table_rows)
 
 
 def get_patches(soup: Soup, game_name: str) -> list:
@@ -32,7 +61,9 @@ def get_patches(soup: Soup, game_name: str) -> list:
 
     patches = []
     table = soup.find('tbody', attrs={'id': 'js-builds'})
-    for tr in table.find_all('tr'):
+    table_rows = table.find_all('tr')
+
+    for tr in table_rows:
         td_list = tr.find_all('td')
         date = datetime.strptime(td_list[0].find('a').string, '%d %B %Y')
         title = td_list[3].find('a').string
@@ -107,3 +138,18 @@ with open('data/hd_de_patches.csv', 'w') as f:
     writer.writerow(['Game', 'DateTime', 'Title', 'Has Patch Notes', 'Patch Type', 'Patch Number', 'Balance Changes', 'Build ID'])
     writer.writerows(get_patches(hd_patches, 'hd'))
     writer.writerows(get_patches(de_patches, 'de'))
+
+for game_id in games.keys():
+    filename = str(game_id) + '.html'
+    f = os.path.join(inputs_dir, filename)
+    if os.path.isfile(f):
+        with open(f, 'r') as steamdb_file:
+            soup = Soup(steamdb_file, 'html.parser')
+            update_patch_counts(soup, game_id)
+
+with open('data/patch_counts.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(['steam_app_id', 'name', 'num_updates'])
+    for game_id, lst in games.items():
+        writer.writerow([game_id, lst[0], lst[1]])
+

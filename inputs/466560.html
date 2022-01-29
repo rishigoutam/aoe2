@@ -1,0 +1,5753 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northgard patches and updates · SteamDB</title>
+<link rel="stylesheet" integrity="sha512-0Nvmfz4Dp7217+Yy/ILaJ3vhQl9OWvAEGpPS8eJmhuzMvWs7GdVVBKTm8xjosZ3gO4CSWYg3IQMEt3pgJwZ4Qg==" href="466560_files/headcrab.css"><link rel="stylesheet" integrity="sha512-UsRxS9S5vbkDi0ZjTxU4fUiytyzTJoMfE5CxpaWoMeET+DNyWE/fKcujQbZAgvHot0RAPaqnzya/05lVePdIqA==" href="466560_files/forum.css">
+<link rel="alternate" type="application/rss+xml" title="SteamDB Builds for app 466560" href="https://steamdb.info/api/PatchnotesRSS/?appid=466560">
+<link rel="alternate" type="application/rss+xml" title="SteamDB Blog" href="https://steamdb.info/api/BlogRSS/">
+<link rel="canonical" href="https://steamdb.info/app/466560/patchnotes/">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@SteamDB">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SteamDB">
+<meta property="og:title" content="Northgard patches and updates">
+<meta name="description" content="Curated patch notes for Northgard on Steam. Updates and changelogs.">
+<meta property="og:description" content="Curated patch notes for Northgard on Steam. Updates and changelogs.">
+<meta property="og:image" content="https://cdn.cloudflare.steamstatic.com/steam/apps/466560/header.jpg?t=1643378342">
+<meta name="theme-color" content="#000000">
+<meta name="application-name" content="SteamDB">
+<meta name="apple-mobile-web-app-title" content="SteamDB">
+<link rel="manifest" href="https://steamdb.info/steamdb.webmanifest">
+<link rel="icon" type="image/png" href="https://steamdb.info/static/logos/32px.png">
+<link rel="icon" type="image/svg+xml" href="https://steamdb.info/static/logos/vector_prefers_schema.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://steamdb.info/static/logos/512px_maskable.png">
+<link rel="mask-icon" href="https://steamdb.info/static/logos/vector_16px.svg" color="#000000">
+<link rel="search" type="application/opensearchdescription+xml" href="https://steamdb.info/opensearch.xml" title="SteamDB">
+<link rel="preconnect" href="https://cdn.cloudflare.steamstatic.com/">
+</head>
+<body class="page-patchnotes" itemscope="" itemtype="http://schema.org/WebSite" data-steam-cdn="https://cdn.cloudflare.steamstatic.com/">
+<a class="skip-main" href="#main" id="js-skip-main">Skip to content</a>
+<div class="header" role="banner">
+<div class="header-menu-button-container">
+<button type="button" class="header-menu-button" id="js-header-hamburger" accesskey="m" aria-label="Toggle menu"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-three-bars" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg> <span>Menu</span></button>
+</div>
+<div class="header-navbar">
+<div class="header-brand"><a href="https://steamdb.info/" itemprop="url" aria-label="Homepage"><svg version="1.1" width="30" height="30" viewBox="0 0 128 128" class="octicon octicon-steamdb" aria-hidden="true"><path fill-rule="evenodd" d="M63.9 0C30.5 0 3.1 11.9.1 27.1l35.6 6.7c2.9-.9 6.2-1.3 9.6-1.3l16.7-10c-.2-2.5 1.3-5.1 4.7-7.2 4.8-3.1 12.3-4.8 19.9-4.8 5.2-.1 10.5.7 15 2.2 11.2 3.8 13.7 11.1 5.7 16.3-5.1 3.3-13.3 5-21.4 4.8l-22 7.9c-.2 1.6-1.3 3.1-3.4 4.5-5.9 3.8-17.4 4.7-25.6 1.9-3.6-1.2-6-3-7-4.8L2.5 38.4c2.3 3.6 6 6.9 10.8 9.8C5 53 0 59 0 65.5c0 6.4 4.8 12.3 12.9 17.1C4.8 87.3 0 93.2 0 99.6 0 115.3 28.6 128 64 128c35.3 0 64-12.7 64-28.4 0-6.4-4.8-12.3-12.9-17 8.1-4.8 12.9-10.7 12.9-17.1 0-6.5-5-12.6-13.4-17.4 8.3-5.1 13.3-11.4 13.3-18.2 0-16.5-28.7-29.9-64-29.9zm22.8 14.2c-5.2.1-10.2 1.2-13.4 3.3-5.5 3.6-3.8 8.5 3.8 11.1 7.6 2.6 18.1 1.8 23.6-1.8s3.8-8.5-3.8-11c-3.1-1-6.7-1.5-10.2-1.5zm.3 1.7c7.4 0 13.3 2.8 13.3 6.2 0 3.4-5.9 6.2-13.3 6.2s-13.3-2.8-13.3-6.2c0-3.4 5.9-6.2 13.3-6.2zM45.3 34.4c-1.6.1-3.1.2-4.6.4l9.1 1.7a10.8 5 0 1 1-8.1 9.3l-8.9-1.7c1 .9 2.4 1.7 4.3 2.4 6.4 2.2 15.4 1.5 20-1.5s3.2-7.2-3.2-9.3c-2.6-.9-5.7-1.3-8.6-1.3zM109 51v9.3c0 11-20.2 19.9-45 19.9-24.9 0-45-8.9-45-19.9v-9.2c11.5 5.3 27.4 8.6 44.9 8.6 17.6 0 33.6-3.3 45.2-8.7zm0 34.6v8.8c0 11-20.2 19.9-45 19.9-24.9 0-45-8.9-45-19.9v-8.8c11.6 5.1 27.4 8.2 45 8.2s33.5-3.1 45-8.2z"></path></svg> <span>SteamDB</span></a></div>
+<form class="header-search" id="js-header-form" method="GET" action="/search/" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction" role="search">
+<input type="hidden" name="a" value="app">
+<meta itemprop="target" content="https://steamdb.info/search/?a=app&amp;q={q}">
+<input type="search" accesskey="/" class="field" name="q" placeholder="Search…" itemprop="query-input" aria-label="Search">
+<button type="submit" class="submit" aria-label="Perform search" tabindex="-1"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-search" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path></svg></button>
+</form>
+<div><a href="https://steamdb.info/sales/">Sales</a></div>
+<div><a href="https://steamdb.info/graph/">Charts</a></div>
+<div><a href="https://steamdb.info/calculator/">Calculator</a></div>
+<div><a href="https://steamdb.info/patchnotes/">Patch notes</a></div>
+<div><a href="https://steamdb.info/upcoming/">Upcoming</a></div>
+<div><a href="https://steamdb.info/discord/">Discord</a></div>
+</div>
+<button type="button" class="header-search-mobile" aria-label="Open search"><svg version="1.1" width="24" height="24" viewBox="0 0 16 16" class="octicon octicon-search" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path></svg></button>
+<div class="header-user hide-small">
+<a class="header-user-avatar" href="https://steamdb.info/calculator/76561198996610853/" aria-label="User menu">
+<img class="avatar" src="466560_files/appicon.svg" alt="You" width="30" height="30">
+</a>
+</div>
+</div>
+<div class="header-search-suggestions">
+<div class="container" id="js-search-tips">
+<p>Start typing to see game suggestions. This only suggests apps that have a store page.</p>
+<ul>
+<li class="hide-small">Use slash key (<kbd>/</kbd>) to focus search from anywhere.</li>
+<li class="hide-small">Use arrow keys (<kbd>↑</kbd> and <kbd>↓</kbd>) to navigate suggestions.</li>
+<li>Enter an appid to be redirected to the app page.</li>
+<li>Enter a steamid (765...) to be redirected to calculator.</li>
+<li>Paste a profile link (/id/ or /profiles/) to be redirected to calculator.</li>
+<li>Paste any url that contains app/, sub/, bundle/, or depot/ to be redirected to the relevant page.</li>
+</ul>
+<p>Click anywhere outside the search field to close this popup.</p>
+</div>
+<div class="container" id="js-search-suggestions"></div>
+<div class="container header-search-enter">Only apps with a store page are suggested. <kbd>Enter</kbd> Submit to view all results.</div>
+</div>
+<div class="header-menu-container" hidden="">
+<div class="header-menu" tabindex="0">
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-info" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg> About</li>
+<li><a href="https://steamdb.info/blog/">Blog</a></li>
+<li><a href="https://steamdb.info/discord/">Discord</a></li>
+<li><a href="https://steamdb.info/faq/">FAQ &amp; help</a></li>
+<li><a href="https://steamdb.info/donate/">Donate &amp; contribute</a></li>
+<li><a href="https://steamdb.info/extension/">Browser extension</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-search" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path></svg> Tools</li>
+<li><a href="https://steamdb.info/sales/">Sales</a></li>
+<li><a href="https://steamdb.info/graph/">Charts</a></li>
+<li><a href="https://steamdb.info/calculator/">Calculator</a></li>
+<li><a href="https://steamdb.info/patchnotes/">Patch notes</a></li>
+<li><a href="https://steamdb.info/instantsearch/">Instant search</a></li>
+<li><a href="https://steamdb.info/sales/history/">When is next sale?</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-sync" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"></path></svg> Tracking</li>
+<li><a href="https://steamdb.info/apps/">Apps</a></li>
+<li><a href="https://steamdb.info/subs/">Packages</a></li>
+<li><a href="https://steamdb.info/bundles/">Bundles</a></li>
+<li><a href="https://steamdb.info/history/">History</a></li>
+<li><a href="https://steamdb.info/pricechanges/">Price changes</a></li>
+<li><a href="https://steamdb.info/upcoming/free/">Free promotions</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-database" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 3.5c0-.133.058-.318.282-.55.227-.237.592-.484 1.1-.708C4.899 1.795 6.354 1.5 8 1.5c1.647 0 3.102.295 4.117.742.51.224.874.47 1.101.707.224.233.282.418.282.551 0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 5.205 9.646 5.5 8 5.5c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707-.224-.233-.282-.418-.282-.551zM1 3.5c0-.626.292-1.165.7-1.59.406-.422.956-.767 1.579-1.041C4.525.32 6.195 0 8 0c1.805 0 3.475.32 4.722.869.622.274 1.172.62 1.578 1.04.408.426.7.965.7 1.591v9c0 .626-.292 1.165-.7 1.59-.406.422-.956.767-1.579 1.041C11.476 15.68 9.806 16 8 16c-1.805 0-3.475-.32-4.721-.869-.623-.274-1.173-.62-1.579-1.04-.408-.426-.7-.965-.7-1.591v-9zM2.5 8V5.724c.241.15.503.286.779.407C4.525 6.68 6.195 7 8 7c1.805 0 3.475-.32 4.722-.869.275-.121.537-.257.778-.407V8c0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 9.705 9.646 10 8 10c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707C2.558 8.318 2.5 8.133 2.5 8zm0 2.225V12.5c0 .133.058.318.282.55.227.237.592.484 1.1.708 1.016.447 2.471.742 4.118.742 1.647 0 3.102-.295 4.117-.742.51-.224.874-.47 1.101-.707.224-.233.282-.418.282-.551v-2.275c-.241.15-.503.285-.778.406-1.247.549-2.917.869-4.722.869-1.805 0-3.475-.32-4.721-.869a6.236 6.236 0 01-.779-.406z"></path></svg> Database</li>
+<li><a href="https://steamdb.info/tags/">User tags</a></li>
+<li><a href="https://steamdb.info/tech/">Technologies &amp; built with</a></li>
+<li><a href="https://steamdb.info/upcoming/">Upcoming releases</a></li>
+<li><a href="https://steamdb.info/upcoming/mostfollowed/">Most followed upcoming</a></li>
+<li><a href="https://steamdb.info/calendar/">Release calendar</a></li>
+<li><a href="https://steamdb.info/stats/releases/">Game releases by year</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-number" aria-hidden="true"><path fill-rule="evenodd" d="M5.604.089A.75.75 0 016 .75v4.77h.711a.75.75 0 110 1.5H3.759a.75.75 0 110-1.5H4.5V2.15l-.334.223a.75.75 0 01-.832-1.248l1.5-1a.75.75 0 01.77-.037zM9 4.75A.75.75 0 019.75 4h4a.75.75 0 01.53 1.28l-1.89 1.892c.312.076.604.18.867.319.742.391 1.244 1.063 1.244 2.005 0 .653-.231 1.208-.629 1.627-.386.408-.894.653-1.408.777-1.01.243-2.225.063-3.124-.527a.75.75 0 01.822-1.254c.534.35 1.32.474 1.951.322.306-.073.53-.201.67-.349.129-.136.218-.32.218-.596 0-.308-.123-.509-.444-.678-.373-.197-.98-.318-1.806-.318a.75.75 0 01-.53-1.28l1.72-1.72H9.75A.75.75 0 019 4.75zm-3.587 5.763c-.35-.05-.77.113-.983.572a.75.75 0 11-1.36-.632c.508-1.094 1.589-1.565 2.558-1.425 1 .145 1.872.945 1.872 2.222 0 1.433-1.088 2.192-1.79 2.681-.308.216-.571.397-.772.573H7a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75c0-.69.3-1.211.67-1.61.348-.372.8-.676 1.15-.92.8-.56 1.18-.904 1.18-1.474 0-.473-.267-.69-.587-.737z"></path></svg> Rankings</li>
+<li><a href="https://steamdb.info/stats/gameratings/">Top rated games</a></li>
+<li><a href="https://steamdb.info/badge/13/">Top game owners</a></li>
+<li><a href="https://steamdb.info/stats/toplevels/">Top profile levels</a></li>
+<li><a href="https://steamdb.info/topsellers/">Top selling games</a></li>
+<li><a href="https://steamdb.info/stats/mostfollowed/">Most followed games</a></li>
+<li><a href="https://steamdb.info/stats/mostwished/">Most wishlisted games</a></li>
+<li><a href="https://steamdb.info/badges/">Profile badges</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-person" aria-hidden="true"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg> Account</li>
+<li><a href="https://steamdb.info/watching/1036345125/">Watch list</a></li>
+<li><a href="https://steamdb.info/calculator/76561198996610853/">Your page</a></li>
+<li><a href="https://steamdb.info/freepackages/">Free packages</a></li>
+<li><a href="https://steamdb.info/user/">Settings</a></li>
+<li><a href="https://steamdb.info/signout/">Sign out</a></li>
+<li>&nbsp;</li>
+<li><a href="https://steamstat.us/">Steam Status</a></li>
+<li><a href="https://steamapi.xpaw.me/">Steam Web API</a></li>
+</ul>
+<div class="header-disclaimer">SteamDB is a hobby project and is not affiliated with Valve or Steam.<br>All times on the site are UTC.</div>
+<div class="header-kbd hide-small"><kbd>M</kbd> toggle this menu <kbd>/</kbd> focus search</div>
+</div>
+</div>
+<div class="header-menu account-menu" hidden="">
+<ul>
+<li><a href="https://steamdb.info/calculator/76561198996610853/">Your page</a></li>
+<li><a href="https://steamdb.info/watching/1036345125/">Watch list</a></li>
+<li><a href="https://steamdb.info/user/">Settings</a></li>
+<li><a href="https://steamdb.info/signout/">Sign out</a></li>
+</ul>
+</div>
+<script nonce="" integrity="sha512-1JumGj28STFQ0UKy3x4Xpc7y7yYvXw3eSAvQzpTPqujfCwUwIY1axK/jyvyJ1FT7R0mIQZyUIUoDWMmwi4XBbg==" src="466560_files/bugsnag.js"></script><script nonce="" integrity="sha512-x3KudlYOtabpd4Jxtph4dZnyYXKlTknePTNOJLLkbjNq/DBfFWgmlxVq4YEUm4G4kLNBpiyql+P59f3MV5/Ehg==" src="466560_files/global.js"></script>
+<div class="body-wrap">
+<div class="body-content" id="main">
+<style>
+.patchnotes-header {
+background: #1b2838;
+background-position: center top;
+background-image: url('https://cdn.cloudflare.steamstatic.com/steam/apps/466560/page_bg_generated_v6b.jpg?t=1643378342');
+padding: 20px 0;
+margin-bottom: 30px;
+}
+.patchnotes-header > .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.patchnotes-rss {
+color: #ff9800;
+}
+.patchnotes-header .header-title,
+.patchnotes-header .header-subtitle {
+color: #fff;
+}
+.patchnotes-header .header-title a {
+color: inherit;
+}
+.patchnotes-heading-right {
+align-self: center;
+}
+#builds-heatmap {
+user-select: none;
+margin-bottom: 0;
+border: 0;
+font-variant-numeric: tabular-nums;
+}
+#builds-heatmap td {
+border: 0;
+padding: 0;
+text-align: center;
+}
+#builds-heatmap .cell-day {
+text-align: right;
+padding-right: 5px;
+}
+#builds-heatmap td:hover {
+text-decoration: underline;
+}
+.heatmap-1 { color: var(--muted-color); background-color: var(--muted-bg-color); }
+.heatmap-2 { color: #000; background-color: #277DA1; }
+.heatmap-3 { color: #000; background-color: #577590; }
+.heatmap-4 { color: #000; background-color: #4D908E; }
+.heatmap-5 { color: #000; background-color: #43AA8B; }
+.heatmap-6 { color: #000; background-color: #90BE6D; }
+.heatmap-6 { color: #000; background-color: #F9C74F; }
+.heatmap-7 { color: #000; background-color: #F9844A; }
+.heatmap-8 { color: #000; background-color: #F8961E; }
+.heatmap-9 { color: #000; background-color: #F3722C; }
+.heatmap-10 { color: #000; background-color: #F94144; }
+@media (max-width: 980px) {
+.patchnotes-header .avatar {
+display: none;
+}
+.patchnotes-heading,
+.patchnotes-header > .container {
+flex-direction: column;
+align-items: flex-start;
+}
+.patchnotes-heading h2 {
+margin-bottom: 0;
+}
+.patchnotes-heading-right {
+align-self: flex-start;
+margin-bottom: 10px;
+}
+}
+</style>
+<div class="patchnotes-header">
+<div class="container">
+<div>
+<h1 class="header-title"><a href="https://steamdb.info/app/466560/" class="app" data-appid="466560">Northgard</a></h1>
+<h2 class="header-subtitle">Builds, patches, and notes</h2>
+</div>
+<a href="https://steamdb.info/app/466560/" class="app" data-appid="466560">
+<img class="avatar" src="466560_files/header.jpg" alt="" width="225" height="105">
+</a>
+<div class="d-flex">
+<a href="https://steamdb.info/api/PatchnotesRSS/?appid=466560" rel="nofollow" class="tooltipped tooltipped-n patchnotes-rss" aria-label="RSS Feed">
+<svg version="1.1" width="64" height="64" viewBox="0 0 16 16" class="octicon octicon-rss" aria-hidden="true"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 01.797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 11-1.497.098 10.502 10.502 0 00-9.776-9.776.75.75 0 01-.7-.798zM2 13a1 1 0 112 0 1 1 0 01-2 0zm.84-5.95a.75.75 0 00-.179 1.489c2.509.3 4.5 2.291 4.8 4.8a.75.75 0 101.49-.178A7.003 7.003 0 002.838 7.05z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="d-flex patchnotes-heading">
+<h2 class="flex-grow">Builds heatmap</h2>
+<span class="patchnotes-heading-right muted"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-clock" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.75.75 0 00-1.5 0v3.5a.75.75 0 00.471.696l2.5 1a.75.75 0 00.557-1.392L8.5 7.742V4.75z"></path></svg> All times are UTC. Click cell to filter.</span>
+</div>
+<div class="table-responsive">
+<table id="builds-heatmap" class="table table-fixed">
+<tbody><tr>
+<td style="width:100px"></td>
+<td class="cell-hour">0</td>
+<td class="cell-hour">1</td>
+<td class="cell-hour">2</td>
+<td class="cell-hour">3</td>
+<td class="cell-hour">4</td>
+<td class="cell-hour">5</td>
+<td class="cell-hour">6</td>
+<td class="cell-hour">7</td>
+<td class="cell-hour">8</td>
+<td class="cell-hour">9</td>
+<td class="cell-hour">10</td>
+<td class="cell-hour">11</td>
+<td class="cell-hour">12</td>
+<td class="cell-hour">13</td>
+<td class="cell-hour">14</td>
+<td class="cell-hour">15</td>
+<td class="cell-hour">16</td>
+<td class="cell-hour">17</td>
+<td class="cell-hour">18</td>
+<td class="cell-hour">19</td>
+<td class="cell-hour">20</td>
+<td class="cell-hour">21</td>
+<td class="cell-hour">22</td>
+<td class="cell-hour">23</td>
+</tr>
+<tr>
+<td class="cell-day">Monday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="1 builds on Monday from 06:00 to 06:59">1</td>
+<td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="3 builds on Monday from 10:00 to 10:59">3</td>
+<td class="cell heatmap-2" aria-label="5 builds on Monday from 11:00 to 11:59">5</td>
+<td class="cell heatmap-4" aria-label="10 builds on Monday from 12:00 to 12:59">10</td>
+<td class="cell heatmap-4" aria-label="12 builds on Monday from 13:00 to 13:59">12</td>
+<td class="cell heatmap-4" aria-label="11 builds on Monday from 14:00 to 14:59">11</td>
+<td class="cell heatmap-3" aria-label="9 builds on Monday from 15:00 to 15:59">9</td>
+<td class="cell heatmap-2" aria-label="6 builds on Monday from 16:00 to 16:59">6</td>
+<td class="cell heatmap-1" aria-label="3 builds on Monday from 17:00 to 17:59">3</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Tuesday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-3" aria-label="7 builds on Tuesday from 09:00 to 09:59">7</td>
+<td class="cell heatmap-1" aria-label="2 builds on Tuesday from 10:00 to 10:59">2</td>
+<td class="cell heatmap-2" aria-label="6 builds on Tuesday from 11:00 to 11:59">6</td>
+<td class="cell heatmap-1" aria-label="1 builds on Tuesday from 12:00 to 12:59">1</td>
+<td class="cell heatmap-3" aria-label="9 builds on Tuesday from 13:00 to 13:59">9</td>
+<td class="cell heatmap-3" aria-label="9 builds on Tuesday from 14:00 to 14:59">9</td>
+<td class="cell heatmap-2" aria-label="5 builds on Tuesday from 15:00 to 15:59">5</td>
+<td class="cell heatmap-4" aria-label="11 builds on Tuesday from 16:00 to 16:59">11</td>
+<td class="cell heatmap-2" aria-label="4 builds on Tuesday from 17:00 to 17:59">4</td>
+<td class="cell heatmap-2" aria-label="5 builds on Tuesday from 18:00 to 18:59">5</td>
+<td></td>
+<td class="cell heatmap-1" aria-label="1 builds on Tuesday from 20:00 to 20:59">1</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Wednesday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="3 builds on Wednesday from 08:00 to 08:59">3</td>
+<td class="cell heatmap-2" aria-label="4 builds on Wednesday from 09:00 to 09:59">4</td>
+<td class="cell heatmap-3" aria-label="7 builds on Wednesday from 10:00 to 10:59">7</td>
+<td class="cell heatmap-2" aria-label="4 builds on Wednesday from 11:00 to 11:59">4</td>
+<td class="cell heatmap-3" aria-label="8 builds on Wednesday from 12:00 to 12:59">8</td>
+<td class="cell heatmap-4" aria-label="10 builds on Wednesday from 13:00 to 13:59">10</td>
+<td class="cell heatmap-6" aria-label="17 builds on Wednesday from 14:00 to 14:59">17</td>
+<td class="cell heatmap-4" aria-label="12 builds on Wednesday from 15:00 to 15:59">12</td>
+<td class="cell heatmap-3" aria-label="8 builds on Wednesday from 16:00 to 16:59">8</td>
+<td class="cell heatmap-2" aria-label="5 builds on Wednesday from 17:00 to 17:59">5</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Thursday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="2 builds on Thursday from 07:00 to 07:59">2</td>
+<td class="cell heatmap-1" aria-label="3 builds on Thursday from 08:00 to 08:59">3</td>
+<td class="cell heatmap-1" aria-label="3 builds on Thursday from 09:00 to 09:59">3</td>
+<td class="cell heatmap-2" aria-label="4 builds on Thursday from 10:00 to 10:59">4</td>
+<td class="cell heatmap-1" aria-label="2 builds on Thursday from 11:00 to 11:59">2</td>
+<td class="cell heatmap-2" aria-label="6 builds on Thursday from 12:00 to 12:59">6</td>
+<td class="cell heatmap-7" aria-label="19 builds on Thursday from 13:00 to 13:59">19</td>
+<td class="cell heatmap-10" aria-label="31 builds on Thursday from 14:00 to 14:59">31</td>
+<td class="cell heatmap-10" aria-label="28 builds on Thursday from 15:00 to 15:59">28</td>
+<td class="cell heatmap-4" aria-label="10 builds on Thursday from 16:00 to 16:59">10</td>
+<td class="cell heatmap-3" aria-label="8 builds on Thursday from 17:00 to 17:59">8</td>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Friday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="1 builds on Friday from 08:00 to 08:59">1</td>
+<td class="cell heatmap-3" aria-label="9 builds on Friday from 09:00 to 09:59">9</td>
+<td class="cell heatmap-4" aria-label="10 builds on Friday from 10:00 to 10:59">10</td>
+<td class="cell heatmap-1" aria-label="3 builds on Friday from 11:00 to 11:59">3</td>
+<td class="cell heatmap-3" aria-label="9 builds on Friday from 12:00 to 12:59">9</td>
+<td class="cell heatmap-5" aria-label="14 builds on Friday from 13:00 to 13:59">14</td>
+<td class="cell heatmap-4" aria-label="11 builds on Friday from 14:00 to 14:59">11</td>
+<td class="cell heatmap-4" aria-label="11 builds on Friday from 15:00 to 15:59">11</td>
+<td class="cell heatmap-3" aria-label="7 builds on Friday from 16:00 to 16:59">7</td>
+<td class="cell heatmap-2" aria-label="4 builds on Friday from 17:00 to 17:59">4</td>
+<td class="cell heatmap-1" aria-label="3 builds on Friday from 18:00 to 18:59">3</td>
+<td></td>
+<td class="cell heatmap-1" aria-label="1 builds on Friday from 20:00 to 20:59">1</td>
+<td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Saturday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td class="cell heatmap-1" aria-label="1 builds on Saturday from 11:00 to 11:59">1</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td class="cell-day">Sunday</td>
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</tbody></table>
+</div>
+<a href="#" class="pull-right" id="js-clear-filter" hidden="">Clear filter</a>
+<span id="js-heatmap-label">&nbsp;</span>
+<div class="d-flex patchnotes-heading">
+<h2 class="flex-grow">Builds</h2>
+<a href="https://steamdb.info/app/466560/patchnotes/?all" rel="nofollow" class="patchnotes-heading-right">View all builds including non public</a>
+</div>
+<table class="table table-hover table-responsive-flex text-left">
+<thead>
+<tr>
+<th style="width:200px">Date</th>
+<th style="width:50px">Day</th>
+<th style="width:60px">Time</th>
+<th>Patch Title</th>
+<th style="width:20px"><span class="tooltipped tooltipped-w" aria-label="Are community patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-beaker" aria-hidden="true"><path fill-rule="evenodd" d="M5 5.782V2.5h-.25a.75.75 0 010-1.5h6.5a.75.75 0 010 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458L5 5.782zM9.5 2.5h-3V6a.75.75 0 01-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 019.5 6V2.5zm-6.9 9.847L3.775 10.5h8.45l1.175 1.847a.75.75 0 01-.633 1.153H3.233a.75.75 0 01-.633-1.153z"></path></svg></span></th>
+<th style="width:20px"><span class="tooltipped tooltipped-w" aria-label="Are official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span></th>
+<th style="width:100px">BuildID</th>
+</tr>
+</thead>
+<tbody id="js-builds">
+<tr data-date="1643280870">
+<td><a href="https://steamdb.info/patchnotes/8096390/" style="color:inherit">27 January 2022</a></td>
+<td>Thu</td>
+<td class="tabular-nums">10:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/8096390/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>8096390</td>
+</tr>
+<tr data-date="1643206094">
+<td><a href="https://steamdb.info/patchnotes/8088577/" style="color:inherit">26 January 2022</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/8088577/" class="b">Dodsvagr - The Clan of the Rat</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>8088577</td>
+</tr>
+<tr data-date="1642753218">
+<td><a href="https://steamdb.info/patchnotes/8059950/" style="color:inherit">21 January 2022</a></td>
+<td>Fri</td>
+<td class="tabular-nums">08:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/8059950/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>8059950</td>
+</tr>
+<tr data-date="1638372822">
+<td><a href="https://steamdb.info/patchnotes/7809618/" style="color:inherit">1 December 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:33</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7809618/" class="b">Wartales is out now!</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>7809618</td>
+</tr>
+<tr data-date="1637143706">
+<td><a href="https://steamdb.info/patchnotes/7715564/" style="color:inherit">17 November 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7715564/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7715564</td>
+</tr>
+<tr data-date="1636988538">
+<td><a href="https://steamdb.info/patchnotes/7714822/" style="color:inherit">15 November 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7714822/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7714822</td>
+</tr>
+<tr data-date="1636540081">
+<td><a href="https://steamdb.info/patchnotes/7688063/" style="color:inherit">10 November 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7688063/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7688063</td>
+</tr>
+<tr data-date="1636474726">
+<td><a href="https://steamdb.info/patchnotes/7682846/" style="color:inherit">9 November 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7682846/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7682846</td>
+</tr>
+<tr data-date="1635947925">
+<td><a href="https://steamdb.info/patchnotes/7649990/" style="color:inherit">3 November 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7649990/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7649990</td>
+</tr>
+<tr data-date="1635930441">
+<td><a href="https://steamdb.info/patchnotes/7643752/" style="color:inherit">3 November 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">09:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7643752/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7643752</td>
+</tr>
+<tr data-date="1635499538">
+<td><a href="https://steamdb.info/patchnotes/7623580/" style="color:inherit">29 October 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:25</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7623580/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7623580</td>
+</tr>
+<tr data-date="1635436927">
+<td><a href="https://steamdb.info/patchnotes/7618601/" style="color:inherit">28 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7618601/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7618601</td>
+</tr>
+<tr data-date="1635434957">
+<td><a href="https://steamdb.info/patchnotes/7618306/" style="color:inherit">28 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7618306/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7618306</td>
+</tr>
+<tr data-date="1635425766">
+<td><a href="https://steamdb.info/patchnotes/7616916/" style="color:inherit">28 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:56</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7616916/" class="b">Night of the living Draugar</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>7616916</td>
+</tr>
+<tr data-date="1634829968">
+<td><a href="https://steamdb.info/patchnotes/7574231/" style="color:inherit">21 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7574231/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7574231</td>
+</tr>
+<tr data-date="1634222532">
+<td><a href="https://steamdb.info/patchnotes/7533358/" style="color:inherit">14 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:42</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7533358/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7533358</td>
+</tr>
+<tr data-date="1633960042">
+<td><a href="https://steamdb.info/patchnotes/7513041/" style="color:inherit">11 October 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7513041/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7513041</td>
+</tr>
+<tr data-date="1633620468">
+<td><a href="https://steamdb.info/patchnotes/7495457/" style="color:inherit">7 October 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7495457/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7495457</td>
+</tr>
+<tr data-date="1633526230">
+<td><a href="https://steamdb.info/patchnotes/7487035/" style="color:inherit">6 October 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7487035/" class="b">Northgard: Kröwns &amp; Daggers</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>7487035</td>
+</tr>
+<tr data-date="1629699834">
+<td><a href="https://steamdb.info/patchnotes/7223099/" style="color:inherit">23 August 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">06:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7223099/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7223099</td>
+</tr>
+<tr data-date="1628675460">
+<td><a href="https://steamdb.info/patchnotes/7171852/" style="color:inherit">11 August 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">09:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7171852/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7171852</td>
+</tr>
+<tr data-date="1628517001">
+<td><a href="https://steamdb.info/patchnotes/7160043/" style="color:inherit">9 August 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7160043/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7160043</td>
+</tr>
+<tr data-date="1627476849">
+<td><a href="https://steamdb.info/patchnotes/7100557/" style="color:inherit">28 July 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7100557/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7100557</td>
+</tr>
+<tr data-date="1627312823">
+<td><a href="https://steamdb.info/patchnotes/7088670/" style="color:inherit">26 July 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7088670/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7088670</td>
+</tr>
+<tr data-date="1626941883">
+<td><a href="https://steamdb.info/patchnotes/7068385/" style="color:inherit">22 July 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">08:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7068385/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>7068385</td>
+</tr>
+<tr data-date="1626788706">
+<td><a href="https://steamdb.info/patchnotes/7057609/" style="color:inherit">20 July 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:45</td>
+<td>
+<a href="https://steamdb.info/patchnotes/7057609/" class="b">Balancing Patch 7 - July 2021</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>7057609</td>
+</tr>
+<tr data-date="1624890046">
+<td><a href="https://steamdb.info/patchnotes/6944952/" style="color:inherit">28 June 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6944952/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6944952</td>
+</tr>
+<tr data-date="1623763569">
+<td><a href="https://steamdb.info/patchnotes/6871485/" style="color:inherit">15 June 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6871485/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6871485</td>
+</tr>
+<tr data-date="1623337023">
+<td><a href="https://steamdb.info/patchnotes/6847040/" style="color:inherit">10 June 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6847040/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6847040</td>
+</tr>
+<tr data-date="1622127939">
+<td><a href="https://steamdb.info/patchnotes/6769153/" style="color:inherit">27 May 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6769153/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6769153</td>
+</tr>
+<tr data-date="1621611074">
+<td><a href="https://steamdb.info/patchnotes/6738769/" style="color:inherit">21 May 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6738769/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6738769</td>
+</tr>
+<tr data-date="1621602631">
+<td><a href="https://steamdb.info/patchnotes/6737776/" style="color:inherit">21 May 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:10</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6737776/" class="b">Ratatoskr - The Clan of the Squirrel</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>6737776</td>
+</tr>
+<tr data-date="1621532662">
+<td><a href="https://steamdb.info/patchnotes/6731874/" style="color:inherit">20 May 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:44</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6731874/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6731874</td>
+</tr>
+<tr data-date="1621263626">
+<td><a href="https://steamdb.info/patchnotes/6712014/" style="color:inherit">17 May 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:00</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6712014/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6712014</td>
+</tr>
+<tr data-date="1619532949">
+<td><a href="https://steamdb.info/patchnotes/6608020/" style="color:inherit">27 April 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6608020/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6608020</td>
+</tr>
+<tr data-date="1619103999">
+<td><a href="https://steamdb.info/patchnotes/6583993/" style="color:inherit">22 April 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6583993/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6583993</td>
+</tr>
+<tr data-date="1618498905">
+<td><a href="https://steamdb.info/patchnotes/6546814/" style="color:inherit">15 April 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:01</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6546814/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6546814</td>
+</tr>
+<tr data-date="1618412096">
+<td><a href="https://steamdb.info/patchnotes/6540249/" style="color:inherit">14 April 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6540249/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6540249</td>
+</tr>
+<tr data-date="1617959211">
+<td><a href="https://steamdb.info/patchnotes/6513862/" style="color:inherit">9 April 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6513862/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6513862</td>
+</tr>
+<tr data-date="1617291709">
+<td><a href="https://steamdb.info/patchnotes/6476896/" style="color:inherit">1 April 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:41</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6476896/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6476896</td>
+</tr>
+<tr data-date="1617265303">
+<td><a href="https://steamdb.info/patchnotes/6474576/" style="color:inherit">1 April 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">08:21</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6474576/" class="i">No title</a>
+</td>
+<td>
+
+</td>
+<td>
+</td>
+<td>6474576</td>
+</tr>
+<tr data-date="1616768739">
+<td><a href="https://steamdb.info/patchnotes/6445658/" style="color:inherit">26 March 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:25</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6445658/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6445658</td>
+</tr>
+<tr data-date="1616500189">
+<td><a href="https://steamdb.info/patchnotes/6425325/" style="color:inherit">23 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:49</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6425325/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6425325</td>
+</tr>
+<tr data-date="1616429879">
+<td><a href="https://steamdb.info/patchnotes/6420524/" style="color:inherit">22 March 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6420524/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6420524</td>
+</tr>
+<tr data-date="1616163858">
+<td><a href="https://steamdb.info/patchnotes/6408668/" style="color:inherit">19 March 2021</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6408668/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6408668</td>
+</tr>
+<tr data-date="1616088297">
+<td><a href="https://steamdb.info/patchnotes/6402432/" style="color:inherit">18 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6402432/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6402432</td>
+</tr>
+<tr data-date="1616078469">
+<td><a href="https://steamdb.info/patchnotes/6401553/" style="color:inherit">18 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:41</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6401553/" class="b">Balancing Patch 6 [MARCH 2021]</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>6401553</td>
+</tr>
+<tr data-date="1615906528">
+<td><a href="https://steamdb.info/patchnotes/6389213/" style="color:inherit">16 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6389213/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6389213</td>
+</tr>
+<tr data-date="1615484080">
+<td><a href="https://steamdb.info/patchnotes/6366632/" style="color:inherit">11 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6366632/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6366632</td>
+</tr>
+<tr data-date="1615481380">
+<td><a href="https://steamdb.info/patchnotes/6359836/" style="color:inherit">11 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:49</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6359836/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6359836</td>
+</tr>
+<tr data-date="1615474040">
+<td><a href="https://steamdb.info/patchnotes/6365423/" style="color:inherit">11 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6365423/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6365423</td>
+</tr>
+<tr data-date="1615312849">
+<td><a href="https://steamdb.info/patchnotes/6354441/" style="color:inherit">9 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">18:00</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6354441/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6354441</td>
+</tr>
+<tr data-date="1615312791">
+<td><a href="https://steamdb.info/patchnotes/6353721/" style="color:inherit">9 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">17:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6353721/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6353721</td>
+</tr>
+<tr data-date="1615290396">
+<td><a href="https://steamdb.info/patchnotes/6352573/" style="color:inherit">9 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:46</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6352573/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6352573</td>
+</tr>
+<tr data-date="1615222581">
+<td><a href="https://steamdb.info/patchnotes/6348036/" style="color:inherit">8 March 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:56</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6348036/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6348036</td>
+</tr>
+<tr data-date="1615214808">
+<td><a href="https://steamdb.info/patchnotes/6347441/" style="color:inherit">8 March 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:46</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6347441/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6347441</td>
+</tr>
+<tr data-date="1614866754">
+<td><a href="https://steamdb.info/patchnotes/6329696/" style="color:inherit">4 March 2021</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6329696/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6329696</td>
+</tr>
+<tr data-date="1614701759">
+<td><a href="https://steamdb.info/patchnotes/6317565/" style="color:inherit">2 March 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6317565/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6317565</td>
+</tr>
+<tr data-date="1614605781">
+<td><a href="https://steamdb.info/patchnotes/6311075/" style="color:inherit">1 March 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6311075/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6311075</td>
+</tr>
+<tr data-date="1614091472">
+<td><a href="https://steamdb.info/patchnotes/6281695/" style="color:inherit">23 February 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:44</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6281695/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6281695</td>
+</tr>
+<tr data-date="1614011270">
+<td><a href="https://steamdb.info/patchnotes/6276456/" style="color:inherit">22 February 2021</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6276456/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6276456</td>
+</tr>
+<tr data-date="1613577055">
+<td><a href="https://steamdb.info/patchnotes/6253300/" style="color:inherit">17 February 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6253300/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6253300</td>
+</tr>
+<tr data-date="1613499606">
+<td><a href="https://steamdb.info/patchnotes/6248266/" style="color:inherit">16 February 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">18:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6248266/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6248266</td>
+</tr>
+<tr data-date="1613487507">
+<td><a href="https://steamdb.info/patchnotes/6247247/" style="color:inherit">16 February 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6247247/" class="b">Northgard Expeditions</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>6247247</td>
+</tr>
+<tr data-date="1612896652">
+<td><a href="https://steamdb.info/patchnotes/6214428/" style="color:inherit">9 February 2021</a></td>
+<td>Tue</td>
+<td class="tabular-nums">18:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6214428/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6214428</td>
+</tr>
+<tr data-date="1611151265">
+<td><a href="https://steamdb.info/patchnotes/6110104/" style="color:inherit">20 January 2021</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:01</td>
+<td>
+<a href="https://steamdb.info/patchnotes/6110104/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>6110104</td>
+</tr>
+<tr data-date="1608311469">
+<td><a href="https://steamdb.info/patchnotes/5988957/" style="color:inherit">18 December 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">17:11</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5988957/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5988957</td>
+</tr>
+<tr data-date="1608307522">
+<td><a href="https://steamdb.info/patchnotes/5988609/" style="color:inherit">18 December 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5988609/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5988609</td>
+</tr>
+<tr data-date="1608130679">
+<td><a href="https://steamdb.info/patchnotes/5976122/" style="color:inherit">16 December 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5976122/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5976122</td>
+</tr>
+<tr data-date="1607966232">
+<td><a href="https://steamdb.info/patchnotes/5965874/" style="color:inherit">14 December 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">17:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5965874/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5965874</td>
+</tr>
+<tr data-date="1607956462">
+<td><a href="https://steamdb.info/patchnotes/5965030/" style="color:inherit">14 December 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5965030/" class="b">Balancing Patch (December 2020)</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>5965030</td>
+</tr>
+<tr data-date="1605693751">
+<td><a href="https://steamdb.info/patchnotes/5846948/" style="color:inherit">18 November 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5846948/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5846948</td>
+</tr>
+<tr data-date="1605525223">
+<td><a href="https://steamdb.info/patchnotes/5836083/" style="color:inherit">16 November 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">11:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5836083/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5836083</td>
+</tr>
+<tr data-date="1602680041">
+<td><a href="https://steamdb.info/patchnotes/5680979/" style="color:inherit">14 October 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5680979/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5680979</td>
+</tr>
+<tr data-date="1602249030">
+<td><a href="https://steamdb.info/patchnotes/5660071/" style="color:inherit">9 October 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:10</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5660071/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5660071</td>
+</tr>
+<tr data-date="1601557909">
+<td><a href="https://steamdb.info/patchnotes/5622181/" style="color:inherit">1 October 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:11</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5622181/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5622181</td>
+</tr>
+<tr data-date="1601044043">
+<td><a href="https://steamdb.info/patchnotes/5595532/" style="color:inherit">25 September 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5595532/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5595532</td>
+</tr>
+<tr data-date="1601027534">
+<td><a href="https://steamdb.info/patchnotes/5594376/" style="color:inherit">25 September 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5594376/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5594376</td>
+</tr>
+<tr data-date="1600957380">
+<td><a href="https://steamdb.info/patchnotes/5590182/" style="color:inherit">24 September 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5590182/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5590182</td>
+</tr>
+<tr data-date="1600782433">
+<td><a href="https://steamdb.info/patchnotes/5578987/" style="color:inherit">22 September 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5578987/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5578987</td>
+</tr>
+<tr data-date="1600354660">
+<td><a href="https://steamdb.info/patchnotes/5558096/" style="color:inherit">17 September 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5558096/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5558096</td>
+</tr>
+<tr data-date="1600336314">
+<td><a href="https://steamdb.info/patchnotes/5556992/" style="color:inherit">17 September 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">09:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5556992/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5556992</td>
+</tr>
+<tr data-date="1600270482">
+<td><a href="https://steamdb.info/patchnotes/5552966/" style="color:inherit">16 September 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5552966/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5552966</td>
+</tr>
+<tr data-date="1600266584">
+<td><a href="https://steamdb.info/patchnotes/5552874/" style="color:inherit">16 September 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5552874/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5552874</td>
+</tr>
+<tr data-date="1600187361">
+<td><a href="https://steamdb.info/patchnotes/5548164/" style="color:inherit">15 September 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5548164/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5548164</td>
+</tr>
+<tr data-date="1600186199">
+<td><a href="https://steamdb.info/patchnotes/5548027/" style="color:inherit">15 September 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5548027/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5548027</td>
+</tr>
+<tr data-date="1600186171">
+<td><a href="https://steamdb.info/patchnotes/5547431/" style="color:inherit">15 September 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5547431/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5547431</td>
+</tr>
+<tr data-date="1598879668">
+<td><a href="https://steamdb.info/patchnotes/5482874/" style="color:inherit">31 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5482874/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5482874</td>
+</tr>
+<tr data-date="1598878398">
+<td><a href="https://steamdb.info/patchnotes/5482804/" style="color:inherit">31 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5482804/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5482804</td>
+</tr>
+<tr data-date="1598876884">
+<td><a href="https://steamdb.info/patchnotes/5482708/" style="color:inherit">31 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5482708/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5482708</td>
+</tr>
+<tr data-date="1598439555">
+<td><a href="https://steamdb.info/patchnotes/5461155/" style="color:inherit">26 August 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5461155/" class="b">The Clan of the Lynx - Coming Soon!</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>5461155</td>
+</tr>
+<tr data-date="1597310984">
+<td><a href="https://steamdb.info/patchnotes/5406893/" style="color:inherit">13 August 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">09:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5406893/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5406893</td>
+</tr>
+<tr data-date="1597235721">
+<td><a href="https://steamdb.info/patchnotes/5402092/" style="color:inherit">12 August 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5402092/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5402092</td>
+</tr>
+<tr data-date="1597069758">
+<td><a href="https://steamdb.info/patchnotes/5393317/" style="color:inherit">10 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5393317/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5393317</td>
+</tr>
+<tr data-date="1597068719">
+<td><a href="https://steamdb.info/patchnotes/5393145/" style="color:inherit">10 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:11</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5393145/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5393145</td>
+</tr>
+<tr data-date="1596462242">
+<td><a href="https://steamdb.info/patchnotes/5365199/" style="color:inherit">3 August 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:44</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5365199/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5365199</td>
+</tr>
+<tr data-date="1596205783">
+<td><a href="https://steamdb.info/patchnotes/5356682/" style="color:inherit">31 July 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5356682/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5356682</td>
+</tr>
+<tr data-date="1596126495">
+<td><a href="https://steamdb.info/patchnotes/5352142/" style="color:inherit">30 July 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5352142/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5352142</td>
+</tr>
+<tr data-date="1596115954">
+<td><a href="https://steamdb.info/patchnotes/5351171/" style="color:inherit">30 July 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5351171/" class="b">Balancing Patch [JULY 2020]</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>5351171</td>
+</tr>
+<tr data-date="1594377392">
+<td><a href="https://steamdb.info/patchnotes/5274112/" style="color:inherit">10 July 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5274112/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5274112</td>
+</tr>
+<tr data-date="1594213906">
+<td><a href="https://steamdb.info/patchnotes/5265062/" style="color:inherit">8 July 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:11</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5265062/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5265062</td>
+</tr>
+<tr data-date="1593703725">
+<td><a href="https://steamdb.info/patchnotes/5243599/" style="color:inherit">2 July 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5243599/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5243599</td>
+</tr>
+<tr data-date="1593699567">
+<td><a href="https://steamdb.info/patchnotes/5243030/" style="color:inherit">2 July 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5243030/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5243030</td>
+</tr>
+<tr data-date="1593164896">
+<td><a href="https://steamdb.info/patchnotes/5218409/" style="color:inherit">26 June 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:48</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5218409/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5218409</td>
+</tr>
+<tr data-date="1593092214">
+<td><a href="https://steamdb.info/patchnotes/5213911/" style="color:inherit">25 June 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5213911/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5213911</td>
+</tr>
+<tr data-date="1592409978">
+<td><a href="https://steamdb.info/patchnotes/5179159/" style="color:inherit">17 June 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5179159/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5179159</td>
+</tr>
+<tr data-date="1592404887">
+<td><a href="https://steamdb.info/patchnotes/5178548/" style="color:inherit">17 June 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:41</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5178548/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5178548</td>
+</tr>
+<tr data-date="1591974847">
+<td><a href="https://steamdb.info/patchnotes/5156332/" style="color:inherit">12 June 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5156332/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5156332</td>
+</tr>
+<tr data-date="1591971534">
+<td><a href="https://steamdb.info/patchnotes/5156054/" style="color:inherit">12 June 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5156054/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5156054</td>
+</tr>
+<tr data-date="1591952743">
+<td><a href="https://steamdb.info/patchnotes/5154598/" style="color:inherit">12 June 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5154598/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5154598</td>
+</tr>
+<tr data-date="1591611279">
+<td><a href="https://steamdb.info/patchnotes/5134599/" style="color:inherit">8 June 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">10:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5134599/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5134599</td>
+</tr>
+<tr data-date="1591361992">
+<td><a href="https://steamdb.info/patchnotes/5125889/" style="color:inherit">5 June 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5125889/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5125889</td>
+</tr>
+<tr data-date="1591276656">
+<td><a href="https://steamdb.info/patchnotes/5120579/" style="color:inherit">4 June 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5120579/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5120579</td>
+</tr>
+<tr data-date="1591173178">
+<td><a href="https://steamdb.info/patchnotes/5113889/" style="color:inherit">3 June 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">08:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5113889/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5113889</td>
+</tr>
+<tr data-date="1590773424">
+<td><a href="https://steamdb.info/patchnotes/5096670/" style="color:inherit">29 May 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">17:30</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5096670/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>5096670</td>
+</tr>
+<tr data-date="1590675259">
+<td><a href="https://steamdb.info/patchnotes/5090212/" style="color:inherit">28 May 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/5090212/" class="b">Free Major Update: Northgard Map Editor</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>5090212</td>
+</tr>
+<tr data-date="1588759650">
+<td><a href="https://steamdb.info/patchnotes/4988989/" style="color:inherit">6 May 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4988989/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4988989</td>
+</tr>
+<tr data-date="1588262323">
+<td><a href="https://steamdb.info/patchnotes/4966239/" style="color:inherit">30 April 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4966239/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4966239</td>
+</tr>
+<tr data-date="1588258974">
+<td><a href="https://steamdb.info/patchnotes/4965893/" style="color:inherit">30 April 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4965893/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4965893</td>
+</tr>
+<tr data-date="1588164053">
+<td><a href="https://steamdb.info/patchnotes/4959901/" style="color:inherit">29 April 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:40</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4959901/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4959901</td>
+</tr>
+<tr data-date="1588156486">
+<td><a href="https://steamdb.info/patchnotes/4959344/" style="color:inherit">29 April 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4959344/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4959344</td>
+</tr>
+<tr data-date="1588151045">
+<td><a href="https://steamdb.info/patchnotes/4958776/" style="color:inherit">29 April 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">09:04</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4958776/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4958776</td>
+</tr>
+<tr data-date="1588148055">
+<td><a href="https://steamdb.info/patchnotes/4958702/" style="color:inherit">29 April 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">08:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4958702/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4958702</td>
+</tr>
+<tr data-date="1587657462">
+<td><a href="https://steamdb.info/patchnotes/4935785/" style="color:inherit">23 April 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4935785/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4935785</td>
+</tr>
+<tr data-date="1587655049">
+<td><a href="https://steamdb.info/patchnotes/4935081/" style="color:inherit">23 April 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4935081/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4935081</td>
+</tr>
+<tr data-date="1586945537">
+<td><a href="https://steamdb.info/patchnotes/4900114/" style="color:inherit">15 April 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">10:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4900114/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4900114</td>
+</tr>
+<tr data-date="1585816082">
+<td><a href="https://steamdb.info/patchnotes/4846333/" style="color:inherit">2 April 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">08:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4846333/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4846333</td>
+</tr>
+<tr data-date="1585153961">
+<td><a href="https://steamdb.info/patchnotes/4818828/" style="color:inherit">25 March 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4818828/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4818828</td>
+</tr>
+<tr data-date="1585153656">
+<td><a href="https://steamdb.info/patchnotes/4818781/" style="color:inherit">25 March 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4818781/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4818781</td>
+</tr>
+<tr data-date="1584973747">
+<td><a href="https://steamdb.info/patchnotes/4809127/" style="color:inherit">23 March 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4809127/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4809127</td>
+</tr>
+<tr data-date="1584623835">
+<td><a href="https://steamdb.info/patchnotes/4796273/" style="color:inherit">19 March 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4796273/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4796273</td>
+</tr>
+<tr data-date="1584465422">
+<td><a href="https://steamdb.info/patchnotes/4788109/" style="color:inherit">17 March 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">17:17</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4788109/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4788109</td>
+</tr>
+<tr data-date="1584454561">
+<td><a href="https://steamdb.info/patchnotes/4787451/" style="color:inherit">17 March 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:16</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4787451/" class="b">Balancing Patch [MARCH 2020]</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>4787451</td>
+</tr>
+<tr data-date="1582553733">
+<td><a href="https://steamdb.info/patchnotes/4709581/" style="color:inherit">24 February 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4709581/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4709581</td>
+</tr>
+<tr data-date="1582304041">
+<td><a href="https://steamdb.info/patchnotes/4667898/" style="color:inherit">21 February 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4667898/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4667898</td>
+</tr>
+<tr data-date="1582291213">
+<td><a href="https://steamdb.info/patchnotes/4697320/" style="color:inherit">21 February 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4697320/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4697320</td>
+</tr>
+<tr data-date="1581339928">
+<td><a href="https://steamdb.info/patchnotes/4659851/" style="color:inherit">10 February 2020</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4659851/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4659851</td>
+</tr>
+<tr data-date="1581081648">
+<td><a href="https://steamdb.info/patchnotes/4652309/" style="color:inherit">7 February 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4652309/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4652309</td>
+</tr>
+<tr data-date="1581003244">
+<td><a href="https://steamdb.info/patchnotes/4648614/" style="color:inherit">6 February 2020</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4648614/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4648614</td>
+</tr>
+<tr data-date="1580833968">
+<td><a href="https://steamdb.info/patchnotes/4640527/" style="color:inherit">4 February 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4640527/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4640527</td>
+</tr>
+<tr data-date="1580824054">
+<td><a href="https://steamdb.info/patchnotes/4640007/" style="color:inherit">4 February 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4640007/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4640007</td>
+</tr>
+<tr data-date="1580809902">
+<td><a href="https://steamdb.info/patchnotes/4636345/" style="color:inherit">4 February 2020</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4636345/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4636345</td>
+</tr>
+<tr data-date="1580473504">
+<td><a href="https://steamdb.info/patchnotes/4627759/" style="color:inherit">31 January 2020</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:25</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4627759/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4627759</td>
+</tr>
+<tr data-date="1580308281">
+<td><a href="https://steamdb.info/patchnotes/4619840/" style="color:inherit">29 January 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4619840/" class="b">Himminbrjotir: The Clan of the Ox</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>4619840</td>
+</tr>
+<tr data-date="1579105847">
+<td><a href="https://steamdb.info/patchnotes/4573308/" style="color:inherit">15 January 2020</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:30</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4573308/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4573308</td>
+</tr>
+<tr data-date="1577099561">
+<td><a href="https://steamdb.info/patchnotes/4521791/" style="color:inherit">23 December 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">11:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4521791/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4521791</td>
+</tr>
+<tr data-date="1576581139">
+<td><a href="https://steamdb.info/patchnotes/4501863/" style="color:inherit">17 December 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4501863/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4501863</td>
+</tr>
+<tr data-date="1576234037">
+<td><a href="https://steamdb.info/patchnotes/4489213/" style="color:inherit">13 December 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4489213/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4489213</td>
+</tr>
+<tr data-date="1576170073">
+<td><a href="https://steamdb.info/patchnotes/4486331/" style="color:inherit">12 December 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:01</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4486331/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4486331</td>
+</tr>
+<tr data-date="1576165876">
+<td><a href="https://steamdb.info/patchnotes/4486036/" style="color:inherit">12 December 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4486036/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4486036</td>
+</tr>
+<tr data-date="1576085065">
+<td><a href="https://steamdb.info/patchnotes/4482457/" style="color:inherit">11 December 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">17:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4482457/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4482457</td>
+</tr>
+<tr data-date="1576064350">
+<td><a href="https://steamdb.info/patchnotes/4481275/" style="color:inherit">11 December 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">11:39</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4481275/" class="b">Winter Festival Update</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>4481275</td>
+</tr>
+<tr data-date="1575467466">
+<td><a href="https://steamdb.info/patchnotes/4458483/" style="color:inherit">4 December 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4458483/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4458483</td>
+</tr>
+<tr data-date="1575386835">
+<td><a href="https://steamdb.info/patchnotes/4454809/" style="color:inherit">3 December 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">15:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4454809/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4454809</td>
+</tr>
+<tr data-date="1575378898">
+<td><a href="https://steamdb.info/patchnotes/4454035/" style="color:inherit">3 December 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4454035/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4454035</td>
+</tr>
+<tr data-date="1574688562">
+<td><a href="https://steamdb.info/patchnotes/4422939/" style="color:inherit">25 November 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4422939/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4422939</td>
+</tr>
+<tr data-date="1574259982">
+<td><a href="https://steamdb.info/patchnotes/4408331/" style="color:inherit">20 November 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4408331/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4408331</td>
+</tr>
+<tr data-date="1573832065">
+<td><a href="https://steamdb.info/patchnotes/4393989/" style="color:inherit">15 November 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4393989/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4393989</td>
+</tr>
+<tr data-date="1573225574">
+<td><a href="https://steamdb.info/patchnotes/4370153/" style="color:inherit">8 November 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4370153/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4370153</td>
+</tr>
+<tr data-date="1573053221">
+<td><a href="https://steamdb.info/patchnotes/4362429/" style="color:inherit">6 November 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4362429/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4362429</td>
+</tr>
+<tr data-date="1573049973">
+<td><a href="https://steamdb.info/patchnotes/4362216/" style="color:inherit">6 November 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4362216/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4362216</td>
+</tr>
+<tr data-date="1572358081">
+<td><a href="https://steamdb.info/patchnotes/4336016/" style="color:inherit">29 October 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4336016/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4336016</td>
+</tr>
+<tr data-date="1572016076">
+<td><a href="https://steamdb.info/patchnotes/4324642/" style="color:inherit">25 October 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4324642/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4324642</td>
+</tr>
+<tr data-date="1572007354">
+<td><a href="https://steamdb.info/patchnotes/4324079/" style="color:inherit">25 October 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:42</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4324079/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4324079</td>
+</tr>
+<tr data-date="1571922161">
+<td><a href="https://steamdb.info/patchnotes/4319776/" style="color:inherit">24 October 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4319776/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4319776</td>
+</tr>
+<tr data-date="1571844538">
+<td><a href="https://steamdb.info/patchnotes/4316167/" style="color:inherit">23 October 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4316167/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4316167</td>
+</tr>
+<tr data-date="1571760310">
+<td><a href="https://steamdb.info/patchnotes/4312280/" style="color:inherit">22 October 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4312280/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4312280</td>
+</tr>
+<tr data-date="1571756742">
+<td><a href="https://steamdb.info/patchnotes/4312101/" style="color:inherit">22 October 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">15:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4312101/" class="b">Northgard Conquest</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>4312101</td>
+</tr>
+<tr data-date="1571737396">
+<td><a href="https://steamdb.info/patchnotes/4311089/" style="color:inherit">22 October 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:43</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4311089/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4311089</td>
+</tr>
+<tr data-date="1571323551">
+<td><a href="https://steamdb.info/patchnotes/4297420/" style="color:inherit">17 October 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:45</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4297420/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4297420</td>
+</tr>
+<tr data-date="1569847758">
+<td><a href="https://steamdb.info/patchnotes/4242412/" style="color:inherit">30 September 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:49</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4242412/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4242412</td>
+</tr>
+<tr data-date="1569241948">
+<td><a href="https://steamdb.info/patchnotes/4220777/" style="color:inherit">23 September 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4220777/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4220777</td>
+</tr>
+<tr data-date="1568633297">
+<td><a href="https://steamdb.info/patchnotes/4199617/" style="color:inherit">16 September 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">11:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4199617/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4199617</td>
+</tr>
+<tr data-date="1568204572">
+<td><a href="https://steamdb.info/patchnotes/4186114/" style="color:inherit">11 September 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:22</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4186114/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4186114</td>
+</tr>
+<tr data-date="1566465348">
+<td><a href="https://steamdb.info/patchnotes/4128774/" style="color:inherit">22 August 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">09:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4128774/" class="i">No title</a>
+</td>
+<td>
+
+</td>
+<td>
+</td>
+<td>4128774</td>
+</tr>
+<tr data-date="1566389368">
+<td><a href="https://steamdb.info/patchnotes/4125771/" style="color:inherit">21 August 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4125771/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4125771</td>
+</tr>
+<tr data-date="1564484620">
+<td><a href="https://steamdb.info/patchnotes/4057559/" style="color:inherit">30 July 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:03</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4057559/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4057559</td>
+</tr>
+<tr data-date="1564151837">
+<td><a href="https://steamdb.info/patchnotes/4047921/" style="color:inherit">26 July 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:37</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4047921/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4047921</td>
+</tr>
+<tr data-date="1564143816">
+<td><a href="https://steamdb.info/patchnotes/4047369/" style="color:inherit">26 July 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4047369/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4047369</td>
+</tr>
+<tr data-date="1564068864">
+<td><a href="https://steamdb.info/patchnotes/4044416/" style="color:inherit">25 July 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4044416/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4044416</td>
+</tr>
+<tr data-date="1564060167">
+<td><a href="https://steamdb.info/patchnotes/4044016/" style="color:inherit">25 July 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4044016/" class="b">Clan of the Kraken</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>4044016</td>
+</tr>
+<tr data-date="1564059296">
+<td><a href="https://steamdb.info/patchnotes/4043889/" style="color:inherit">25 July 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/4043889/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>4043889</td>
+</tr>
+<tr data-date="1560518154">
+<td><a href="https://steamdb.info/patchnotes/3915122/" style="color:inherit">14 June 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3915122/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3915122</td>
+</tr>
+<tr data-date="1560248502">
+<td><a href="https://steamdb.info/patchnotes/3907429/" style="color:inherit">11 June 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">10:21</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3907429/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3907429</td>
+</tr>
+<tr data-date="1560245191">
+<td><a href="https://steamdb.info/patchnotes/3898397/" style="color:inherit">11 June 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3898397/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3898397</td>
+</tr>
+<tr data-date="1560244930">
+<td><a href="https://steamdb.info/patchnotes/3907293/" style="color:inherit">11 June 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:22</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3907293/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3907293</td>
+</tr>
+<tr data-date="1559904826">
+<td><a href="https://steamdb.info/patchnotes/3897553/" style="color:inherit">7 June 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3897553/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3897553</td>
+</tr>
+<tr data-date="1559831194">
+<td><a href="https://steamdb.info/patchnotes/3894543/" style="color:inherit">6 June 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3894543/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3894543</td>
+</tr>
+<tr data-date="1559744697">
+<td><a href="https://steamdb.info/patchnotes/3890892/" style="color:inherit">5 June 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3890892/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3890892</td>
+</tr>
+<tr data-date="1559743627">
+<td><a href="https://steamdb.info/patchnotes/3890170/" style="color:inherit">5 June 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3890170/" class="b">[Patchnote] Balancing Patch</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>3890170</td>
+</tr>
+<tr data-date="1556893857">
+<td><a href="https://steamdb.info/patchnotes/3791505/" style="color:inherit">3 May 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:30</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3791505/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3791505</td>
+</tr>
+<tr data-date="1556804563">
+<td><a href="https://steamdb.info/patchnotes/3787970/" style="color:inherit">2 May 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:42</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3787970/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3787970</td>
+</tr>
+<tr data-date="1556206671">
+<td><a href="https://steamdb.info/patchnotes/3768755/" style="color:inherit">25 April 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:37</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3768755/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3768755</td>
+</tr>
+<tr data-date="1556195700">
+<td><a href="https://steamdb.info/patchnotes/3768238/" style="color:inherit">25 April 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3768238/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3768238</td>
+</tr>
+<tr data-date="1556035322">
+<td><a href="https://steamdb.info/patchnotes/3761628/" style="color:inherit">23 April 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3761628/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3761628</td>
+</tr>
+<tr data-date="1556030843">
+<td><a href="https://steamdb.info/patchnotes/3761417/" style="color:inherit">23 April 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3761417/" class="b">[PATCHNOTE] Clan of the Horse</a>
+</td>
+<td>
+</td>
+<td>
+<span class="tooltipped tooltipped-w patchnotes-check" aria-label="Official patch notes included"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-check-circle-fill" aria-hidden="true"><path fill-rule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zm3.78-9.72a.75.75 0 00-1.06-1.06L6.75 9.19 5.28 7.72a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l4.5-4.5z"></path></svg></span>
+</td>
+<td>3761417</td>
+</tr>
+<tr data-date="1554209639">
+<td><a href="https://steamdb.info/patchnotes/3701775/" style="color:inherit">2 April 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">12:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3701775/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3701775</td>
+</tr>
+<tr data-date="1554121635">
+<td><a href="https://steamdb.info/patchnotes/3698183/" style="color:inherit">1 April 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3698183/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3698183</td>
+</tr>
+<tr data-date="1553857433">
+<td><a href="https://steamdb.info/patchnotes/3691382/" style="color:inherit">29 March 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">11:03</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3691382/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3691382</td>
+</tr>
+<tr data-date="1553855570">
+<td><a href="https://steamdb.info/patchnotes/3691267/" style="color:inherit">29 March 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3691267/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3691267</td>
+</tr>
+<tr data-date="1553790959">
+<td><a href="https://steamdb.info/patchnotes/3688911/" style="color:inherit">28 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3688911/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3688911</td>
+</tr>
+<tr data-date="1553688569">
+<td><a href="https://steamdb.info/patchnotes/3684387/" style="color:inherit">27 March 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3684387/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3684387</td>
+</tr>
+<tr data-date="1553529293">
+<td><a href="https://steamdb.info/patchnotes/3677868/" style="color:inherit">25 March 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3677868/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3677868</td>
+</tr>
+<tr data-date="1553514932">
+<td><a href="https://steamdb.info/patchnotes/3677229/" style="color:inherit">25 March 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">11:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3677229/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3677229</td>
+</tr>
+<tr data-date="1553263053">
+<td><a href="https://steamdb.info/patchnotes/3671388/" style="color:inherit">22 March 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3671388/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3671388</td>
+</tr>
+<tr data-date="1553191135">
+<td><a href="https://steamdb.info/patchnotes/3668531/" style="color:inherit">21 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3668531/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3668531</td>
+</tr>
+<tr data-date="1553175265">
+<td><a href="https://steamdb.info/patchnotes/3667612/" style="color:inherit">21 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3667612/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3667612</td>
+</tr>
+<tr data-date="1553095458">
+<td><a href="https://steamdb.info/patchnotes/3664627/" style="color:inherit">20 March 2019</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3664627/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3664627</td>
+</tr>
+<tr data-date="1553011334">
+<td><a href="https://steamdb.info/patchnotes/3661365/" style="color:inherit">19 March 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3661365/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3661365</td>
+</tr>
+<tr data-date="1552990176">
+<td><a href="https://steamdb.info/patchnotes/3660303/" style="color:inherit">19 March 2019</a></td>
+<td>Tue</td>
+<td class="tabular-nums">10:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3660303/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3660303</td>
+</tr>
+<tr data-date="1552926269">
+<td><a href="https://steamdb.info/patchnotes/3656683/" style="color:inherit">18 March 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3656683/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3656683</td>
+</tr>
+<tr data-date="1552673143">
+<td><a href="https://steamdb.info/patchnotes/3650748/" style="color:inherit">15 March 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">18:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3650748/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3650748</td>
+</tr>
+<tr data-date="1552661974">
+<td><a href="https://steamdb.info/patchnotes/3650149/" style="color:inherit">15 March 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3650149/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3650149</td>
+</tr>
+<tr data-date="1552583613">
+<td><a href="https://steamdb.info/patchnotes/3645786/" style="color:inherit">14 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3645786/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3645786</td>
+</tr>
+<tr data-date="1552578638">
+<td><a href="https://steamdb.info/patchnotes/3645598/" style="color:inherit">14 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3645598/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3645598</td>
+</tr>
+<tr data-date="1552578600">
+<td><a href="https://steamdb.info/patchnotes/3645596/" style="color:inherit">14 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3645596/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3645596</td>
+</tr>
+<tr data-date="1552577146">
+<td><a href="https://steamdb.info/patchnotes/3645501/" style="color:inherit">14 March 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:25</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3645501/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3645501</td>
+</tr>
+<tr data-date="1548329235">
+<td><a href="https://steamdb.info/patchnotes/3497616/" style="color:inherit">24 January 2019</a></td>
+<td>Thu</td>
+<td class="tabular-nums">11:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3497616/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3497616</td>
+</tr>
+<tr data-date="1547463636">
+<td><a href="https://steamdb.info/patchnotes/3466613/" style="color:inherit">14 January 2019</a></td>
+<td>Mon</td>
+<td class="tabular-nums">11:00</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3466613/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3466613</td>
+</tr>
+<tr data-date="1547214389">
+<td><a href="https://steamdb.info/patchnotes/3460900/" style="color:inherit">11 January 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:46</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3460900/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3460900</td>
+</tr>
+<tr data-date="1547206462">
+<td><a href="https://steamdb.info/patchnotes/3460546/" style="color:inherit">11 January 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">11:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3460546/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3460546</td>
+</tr>
+<tr data-date="1547202113">
+<td><a href="https://steamdb.info/patchnotes/3460332/" style="color:inherit">11 January 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:21</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3460332/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3460332</td>
+</tr>
+<tr data-date="1547201336">
+<td><a href="https://steamdb.info/patchnotes/3448431/" style="color:inherit">11 January 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3448431/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3448431</td>
+</tr>
+<tr data-date="1547199271">
+<td><a href="https://steamdb.info/patchnotes/3460176/" style="color:inherit">11 January 2019</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3460176/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3460176</td>
+</tr>
+<tr data-date="1545324648">
+<td><a href="https://steamdb.info/patchnotes/3417140/" style="color:inherit">20 December 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3417140/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3417140</td>
+</tr>
+<tr data-date="1545238398">
+<td><a href="https://steamdb.info/patchnotes/3413184/" style="color:inherit">19 December 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3413184/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3413184</td>
+</tr>
+<tr data-date="1545235795">
+<td><a href="https://steamdb.info/patchnotes/3412999/" style="color:inherit">19 December 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3412999/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3412999</td>
+</tr>
+<tr data-date="1545156859">
+<td><a href="https://steamdb.info/patchnotes/3409572/" style="color:inherit">18 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">18:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3409572/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3409572</td>
+</tr>
+<tr data-date="1545154474">
+<td><a href="https://steamdb.info/patchnotes/3409412/" style="color:inherit">18 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">17:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3409412/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3409412</td>
+</tr>
+<tr data-date="1545141562">
+<td><a href="https://steamdb.info/patchnotes/3408599/" style="color:inherit">18 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3408599/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3408599</td>
+</tr>
+<tr data-date="1544802227">
+<td><a href="https://steamdb.info/patchnotes/3398418/" style="color:inherit">14 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:43</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3398418/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3398418</td>
+</tr>
+<tr data-date="1544797731">
+<td><a href="https://steamdb.info/patchnotes/3398108/" style="color:inherit">14 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3398108/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3398108</td>
+</tr>
+<tr data-date="1544788339">
+<td><a href="https://steamdb.info/patchnotes/3397613/" style="color:inherit">14 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">11:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3397613/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3397613</td>
+</tr>
+<tr data-date="1544782956">
+<td><a href="https://steamdb.info/patchnotes/3397298/" style="color:inherit">14 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:22</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3397298/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3397298</td>
+</tr>
+<tr data-date="1544526478">
+<td><a href="https://steamdb.info/patchnotes/3385820/" style="color:inherit">11 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3385820/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3385820</td>
+</tr>
+<tr data-date="1544205321">
+<td><a href="https://steamdb.info/patchnotes/3376885/" style="color:inherit">7 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">17:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3376885/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3376885</td>
+</tr>
+<tr data-date="1544196526">
+<td><a href="https://steamdb.info/patchnotes/3376425/" style="color:inherit">7 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3376425/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3376425</td>
+</tr>
+<tr data-date="1544179619">
+<td><a href="https://steamdb.info/patchnotes/3373078/" style="color:inherit">7 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:46</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3373078/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3373078</td>
+</tr>
+<tr data-date="1544179502">
+<td><a href="https://steamdb.info/patchnotes/3375519/" style="color:inherit">7 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:45</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3375519/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3375519</td>
+</tr>
+<tr data-date="1544179226">
+<td><a href="https://steamdb.info/patchnotes/3375523/" style="color:inherit">7 December 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">10:40</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3375523/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3375523</td>
+</tr>
+<tr data-date="1544017086">
+<td><a href="https://steamdb.info/patchnotes/3368797/" style="color:inherit">5 December 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:38</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3368797/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3368797</td>
+</tr>
+<tr data-date="1544008246">
+<td><a href="https://steamdb.info/patchnotes/3368342/" style="color:inherit">5 December 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">11:10</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3368342/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3368342</td>
+</tr>
+<tr data-date="1543946430">
+<td><a href="https://steamdb.info/patchnotes/3365878/" style="color:inherit">4 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">18:00</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3365878/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3365878</td>
+</tr>
+<tr data-date="1543944581">
+<td><a href="https://steamdb.info/patchnotes/3365766/" style="color:inherit">4 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">17:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3365766/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3365766</td>
+</tr>
+<tr data-date="1543942589">
+<td><a href="https://steamdb.info/patchnotes/3365636/" style="color:inherit">4 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:56</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3365636/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3365636</td>
+</tr>
+<tr data-date="1543931538">
+<td><a href="https://steamdb.info/patchnotes/3365076/" style="color:inherit">4 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3365076/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3365076</td>
+</tr>
+<tr data-date="1543930756">
+<td><a href="https://steamdb.info/patchnotes/3365024/" style="color:inherit">4 December 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:39</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3365024/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3365024</td>
+</tr>
+<tr data-date="1539959498">
+<td><a href="https://steamdb.info/patchnotes/3229137/" style="color:inherit">19 October 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3229137/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3229137</td>
+</tr>
+<tr data-date="1539959002">
+<td><a href="https://steamdb.info/patchnotes/3229112/" style="color:inherit">19 October 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">14:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3229112/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3229112</td>
+</tr>
+<tr data-date="1539953487">
+<td><a href="https://steamdb.info/patchnotes/3228733/" style="color:inherit">19 October 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3228733/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3228733</td>
+</tr>
+<tr data-date="1539607646">
+<td><a href="https://steamdb.info/patchnotes/3213889/" style="color:inherit">15 October 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3213889/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3213889</td>
+</tr>
+<tr data-date="1539606930">
+<td><a href="https://steamdb.info/patchnotes/3185802/" style="color:inherit">15 October 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3185802/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3185802</td>
+</tr>
+<tr data-date="1539606901">
+<td><a href="https://steamdb.info/patchnotes/3213311/" style="color:inherit">15 October 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3213311/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3213311</td>
+</tr>
+<tr data-date="1539599654">
+<td><a href="https://steamdb.info/patchnotes/3213597/" style="color:inherit">15 October 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">10:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3213597/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3213597</td>
+</tr>
+<tr data-date="1538732430">
+<td><a href="https://steamdb.info/patchnotes/3185660/" style="color:inherit">5 October 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:40</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3185660/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3185660</td>
+</tr>
+<tr data-date="1538668024">
+<td><a href="https://steamdb.info/patchnotes/3183297/" style="color:inherit">4 October 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3183297/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3183297</td>
+</tr>
+<tr data-date="1538661902">
+<td><a href="https://steamdb.info/patchnotes/3182987/" style="color:inherit">4 October 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3182987/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3182987</td>
+</tr>
+<tr data-date="1538649927">
+<td><a href="https://steamdb.info/patchnotes/3182365/" style="color:inherit">4 October 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">10:45</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3182365/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3182365</td>
+</tr>
+<tr data-date="1538639408">
+<td><a href="https://steamdb.info/patchnotes/3181792/" style="color:inherit">4 October 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">07:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3181792/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3181792</td>
+</tr>
+<tr data-date="1538639253">
+<td><a href="https://steamdb.info/patchnotes/3181787/" style="color:inherit">4 October 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">07:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3181787/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3181787</td>
+</tr>
+<tr data-date="1538582135">
+<td><a href="https://steamdb.info/patchnotes/3179605/" style="color:inherit">3 October 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3179605/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3179605</td>
+</tr>
+<tr data-date="1538578426">
+<td><a href="https://steamdb.info/patchnotes/3179405/" style="color:inherit">3 October 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3179405/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3179405</td>
+</tr>
+<tr data-date="1538576400">
+<td><a href="https://steamdb.info/patchnotes/3179228/" style="color:inherit">3 October 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:20</td>
+<td>
+<a href="https://steamdb.info/patchnotes/3179228/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>3179228</td>
+</tr>
+<tr data-date="1538575850">
+<td><a href="https://steamdb.info/patchnotes/2999025/" style="color:inherit">3 October 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:10</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2999025/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2999025</td>
+</tr>
+<tr data-date="1532527395">
+<td><a href="https://steamdb.info/patchnotes/2975789/" style="color:inherit">25 July 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:03</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2975789/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2975789</td>
+</tr>
+<tr data-date="1532348919">
+<td><a href="https://steamdb.info/patchnotes/2968659/" style="color:inherit">23 July 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2968659/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2968659</td>
+</tr>
+<tr data-date="1532118729">
+<td><a href="https://steamdb.info/patchnotes/2959815/" style="color:inherit">20 July 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">20:32</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2959815/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2959815</td>
+</tr>
+<tr data-date="1532094761">
+<td><a href="https://steamdb.info/patchnotes/2962993/" style="color:inherit">20 July 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2962993/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2962993</td>
+</tr>
+<tr data-date="1532092036">
+<td><a href="https://steamdb.info/patchnotes/2962840/" style="color:inherit">20 July 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2962840/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2962840</td>
+</tr>
+<tr data-date="1532011970">
+<td><a href="https://steamdb.info/patchnotes/2959563/" style="color:inherit">19 July 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2959563/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2959563</td>
+</tr>
+<tr data-date="1532005828">
+<td><a href="https://steamdb.info/patchnotes/2959200/" style="color:inherit">19 July 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:10</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2959200/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2959200</td>
+</tr>
+<tr data-date="1532005777">
+<td><a href="https://steamdb.info/patchnotes/2959197/" style="color:inherit">19 July 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2959197/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2959197</td>
+</tr>
+<tr data-date="1532005092">
+<td><a href="https://steamdb.info/patchnotes/2959047/" style="color:inherit">19 July 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2959047/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2959047</td>
+</tr>
+<tr data-date="1527517184">
+<td><a href="https://steamdb.info/patchnotes/2812634/" style="color:inherit">28 May 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2812634/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2812634</td>
+</tr>
+<tr data-date="1527173368">
+<td><a href="https://steamdb.info/patchnotes/2803353/" style="color:inherit">24 May 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:49</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2803353/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2803353</td>
+</tr>
+<tr data-date="1527170397">
+<td><a href="https://steamdb.info/patchnotes/2803132/" style="color:inherit">24 May 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2803132/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2803132</td>
+</tr>
+<tr data-date="1527168183">
+<td><a href="https://steamdb.info/patchnotes/2803029/" style="color:inherit">24 May 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2803029/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2803029</td>
+</tr>
+<tr data-date="1526661492">
+<td><a href="https://steamdb.info/patchnotes/2786610/" style="color:inherit">18 May 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:38</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2786610/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2786610</td>
+</tr>
+<tr data-date="1526575111">
+<td><a href="https://steamdb.info/patchnotes/2783012/" style="color:inherit">17 May 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:38</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2783012/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2783012</td>
+</tr>
+<tr data-date="1526485817">
+<td><a href="https://steamdb.info/patchnotes/2779435/" style="color:inherit">16 May 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2779435/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2779435</td>
+</tr>
+<tr data-date="1526485682">
+<td><a href="https://steamdb.info/patchnotes/2779418/" style="color:inherit">16 May 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:48</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2779418/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2779418</td>
+</tr>
+<tr data-date="1526483115">
+<td><a href="https://steamdb.info/patchnotes/2779238/" style="color:inherit">16 May 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2779238/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2779238</td>
+</tr>
+<tr data-date="1523017902">
+<td><a href="https://steamdb.info/patchnotes/2665980/" style="color:inherit">6 April 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2665980/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2665980</td>
+</tr>
+<tr data-date="1522332474">
+<td><a href="https://steamdb.info/patchnotes/2645049/" style="color:inherit">29 March 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2645049/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2645049</td>
+</tr>
+<tr data-date="1521035488">
+<td><a href="https://steamdb.info/patchnotes/2603256/" style="color:inherit">14 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2603256/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2603256</td>
+</tr>
+<tr data-date="1521035225">
+<td><a href="https://steamdb.info/patchnotes/2603241/" style="color:inherit">14 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2603241/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2603241</td>
+</tr>
+<tr data-date="1521034103">
+<td><a href="https://steamdb.info/patchnotes/2603181/" style="color:inherit">14 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2603181/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2603181</td>
+</tr>
+<tr data-date="1521027859">
+<td><a href="https://steamdb.info/patchnotes/2602941/" style="color:inherit">14 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">11:44</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2602941/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2602941</td>
+</tr>
+<tr data-date="1520931821">
+<td><a href="https://steamdb.info/patchnotes/2599236/" style="color:inherit">13 March 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:03</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2599236/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2599236</td>
+</tr>
+<tr data-date="1520876216">
+<td><a href="https://steamdb.info/patchnotes/2597312/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">17:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2597312/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2597312</td>
+</tr>
+<tr data-date="1520867202">
+<td><a href="https://steamdb.info/patchnotes/2596869/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596869/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596869</td>
+</tr>
+<tr data-date="1520864173">
+<td><a href="https://steamdb.info/patchnotes/2596717/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:16</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596717/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596717</td>
+</tr>
+<tr data-date="1520863576">
+<td><a href="https://steamdb.info/patchnotes/2596673/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596673/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596673</td>
+</tr>
+<tr data-date="1520861246">
+<td><a href="https://steamdb.info/patchnotes/2596562/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596562/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596562</td>
+</tr>
+<tr data-date="1520861036">
+<td><a href="https://steamdb.info/patchnotes/2596551/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596551/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596551</td>
+</tr>
+<tr data-date="1520860591">
+<td><a href="https://steamdb.info/patchnotes/2596536/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:16</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596536/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596536</td>
+</tr>
+<tr data-date="1520860092">
+<td><a href="https://steamdb.info/patchnotes/2596515/" style="color:inherit">12 March 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2596515/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2596515</td>
+</tr>
+<tr data-date="1520619282">
+<td><a href="https://steamdb.info/patchnotes/2591216/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">18:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2591216/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2591216</td>
+</tr>
+<tr data-date="1520618794">
+<td><a href="https://steamdb.info/patchnotes/2591188/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">18:06</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2591188/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2591188</td>
+</tr>
+<tr data-date="1520612825">
+<td><a href="https://steamdb.info/patchnotes/2590929/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2590929/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2590929</td>
+</tr>
+<tr data-date="1520610356">
+<td><a href="https://steamdb.info/patchnotes/2590801/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:45</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2590801/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2590801</td>
+</tr>
+<tr data-date="1520609509">
+<td><a href="https://steamdb.info/patchnotes/2590776/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2590776/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2590776</td>
+</tr>
+<tr data-date="1520600577">
+<td><a href="https://steamdb.info/patchnotes/2590298/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2590298/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2590298</td>
+</tr>
+<tr data-date="1520600001">
+<td><a href="https://steamdb.info/patchnotes/2590109/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2590109/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2590109</td>
+</tr>
+<tr data-date="1520587111">
+<td><a href="https://steamdb.info/patchnotes/2589624/" style="color:inherit">9 March 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2589624/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2589624</td>
+</tr>
+<tr data-date="1520527865">
+<td><a href="https://steamdb.info/patchnotes/2587528/" style="color:inherit">8 March 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2587528/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2587528</td>
+</tr>
+<tr data-date="1520523366">
+<td><a href="https://steamdb.info/patchnotes/2587281/" style="color:inherit">8 March 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2587281/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2587281</td>
+</tr>
+<tr data-date="1520523339">
+<td><a href="https://steamdb.info/patchnotes/2587279/" style="color:inherit">8 March 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:35</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2587279/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2587279</td>
+</tr>
+<tr data-date="1520442932">
+<td><a href="https://steamdb.info/patchnotes/2584219/" style="color:inherit">7 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">17:15</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2584219/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2584219</td>
+</tr>
+<tr data-date="1520442766">
+<td><a href="https://steamdb.info/patchnotes/2584200/" style="color:inherit">7 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">17:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2584200/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2584200</td>
+</tr>
+<tr data-date="1520440292">
+<td><a href="https://steamdb.info/patchnotes/2584094/" style="color:inherit">7 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:31</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2584094/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2584094</td>
+</tr>
+<tr data-date="1520434363">
+<td><a href="https://steamdb.info/patchnotes/2583782/" style="color:inherit">7 March 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2583782/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2583782</td>
+</tr>
+<tr data-date="1518099769">
+<td><a href="https://steamdb.info/patchnotes/2508917/" style="color:inherit">8 February 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:22</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2508917/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2508917</td>
+</tr>
+<tr data-date="1518015580">
+<td><a href="https://steamdb.info/patchnotes/2505294/" style="color:inherit">7 February 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">14:59</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2505294/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2505294</td>
+</tr>
+<tr data-date="1518002391">
+<td><a href="https://steamdb.info/patchnotes/2504760/" style="color:inherit">7 February 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">11:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2504760/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2504760</td>
+</tr>
+<tr data-date="1517496789">
+<td><a href="https://steamdb.info/patchnotes/2488941/" style="color:inherit">1 February 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2488941/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2488941</td>
+</tr>
+<tr data-date="1516640029">
+<td><a href="https://steamdb.info/patchnotes/2458445/" style="color:inherit">22 January 2018</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2458445/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2458445</td>
+</tr>
+<tr data-date="1516376542">
+<td><a href="https://steamdb.info/patchnotes/2452084/" style="color:inherit">19 January 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:42</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2452084/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2452084</td>
+</tr>
+<tr data-date="1516363227">
+<td><a href="https://steamdb.info/patchnotes/2451457/" style="color:inherit">19 January 2018</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:00</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2451457/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2451457</td>
+</tr>
+<tr data-date="1516289853">
+<td><a href="https://steamdb.info/patchnotes/2448519/" style="color:inherit">18 January 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:37</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2448519/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2448519</td>
+</tr>
+<tr data-date="1516287750">
+<td><a href="https://steamdb.info/patchnotes/2448375/" style="color:inherit">18 January 2018</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2448375/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2448375</td>
+</tr>
+<tr data-date="1515586406">
+<td><a href="https://steamdb.info/patchnotes/2425912/" style="color:inherit">10 January 2018</a></td>
+<td>Wed</td>
+<td class="tabular-nums">12:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2425912/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2425912</td>
+</tr>
+<tr data-date="1515530481">
+<td><a href="https://steamdb.info/patchnotes/2382389/" style="color:inherit">9 January 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">20:41</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2382389/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2382389</td>
+</tr>
+<tr data-date="1515510845">
+<td><a href="https://steamdb.info/patchnotes/2423389/" style="color:inherit">9 January 2018</a></td>
+<td>Tue</td>
+<td class="tabular-nums">15:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2423389/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2423389</td>
+</tr>
+<tr data-date="1511969282">
+<td><a href="https://steamdb.info/patchnotes/2325533/" style="color:inherit">29 November 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2325533/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2325533</td>
+</tr>
+<tr data-date="1510843821">
+<td><a href="https://steamdb.info/patchnotes/2290152/" style="color:inherit">16 November 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2290152/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2290152</td>
+</tr>
+<tr data-date="1510842857">
+<td><a href="https://steamdb.info/patchnotes/2290086/" style="color:inherit">16 November 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2290086/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2290086</td>
+</tr>
+<tr data-date="1510841689">
+<td><a href="https://steamdb.info/patchnotes/2290017/" style="color:inherit">16 November 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2290017/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2290017</td>
+</tr>
+<tr data-date="1509701371">
+<td><a href="https://steamdb.info/patchnotes/2254761/" style="color:inherit">3 November 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">09:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2254761/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2254761</td>
+</tr>
+<tr data-date="1508923723">
+<td><a href="https://steamdb.info/patchnotes/2227956/" style="color:inherit">25 October 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">09:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2227956/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2227956</td>
+</tr>
+<tr data-date="1508853850">
+<td><a href="https://steamdb.info/patchnotes/2225376/" style="color:inherit">24 October 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:04</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2225376/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2225376</td>
+</tr>
+<tr data-date="1508417725">
+<td><a href="https://steamdb.info/patchnotes/2212324/" style="color:inherit">19 October 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2212324/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2212324</td>
+</tr>
+<tr data-date="1506610644">
+<td><a href="https://steamdb.info/patchnotes/2155823/" style="color:inherit">28 September 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2155823/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2155823</td>
+</tr>
+<tr data-date="1506603947">
+<td><a href="https://steamdb.info/patchnotes/2155470/" style="color:inherit">28 September 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2155470/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2155470</td>
+</tr>
+<tr data-date="1506355031">
+<td><a href="https://steamdb.info/patchnotes/2145920/" style="color:inherit">25 September 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2145920/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2145920</td>
+</tr>
+<tr data-date="1506346167">
+<td><a href="https://steamdb.info/patchnotes/2145442/" style="color:inherit">25 September 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">13:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2145442/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2145442</td>
+</tr>
+<tr data-date="1506009052">
+<td><a href="https://steamdb.info/patchnotes/2137110/" style="color:inherit">21 September 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2137110/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2137110</td>
+</tr>
+<tr data-date="1505998007">
+<td><a href="https://steamdb.info/patchnotes/2136565/" style="color:inherit">21 September 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">12:46</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2136565/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2136565</td>
+</tr>
+<tr data-date="1503059657">
+<td><a href="https://steamdb.info/patchnotes/2049833/" style="color:inherit">18 August 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">12:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/2049833/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>2049833</td>
+</tr>
+<tr data-date="1500995937">
+<td><a href="https://steamdb.info/patchnotes/1985842/" style="color:inherit">25 July 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">15:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1985842/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1985842</td>
+</tr>
+<tr data-date="1500990004">
+<td><a href="https://steamdb.info/patchnotes/1985557/" style="color:inherit">25 July 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">13:40</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1985557/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1985557</td>
+</tr>
+<tr data-date="1500975366">
+<td><a href="https://steamdb.info/patchnotes/1985050/" style="color:inherit">25 July 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1985050/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1985050</td>
+</tr>
+<tr data-date="1500911609">
+<td><a href="https://steamdb.info/patchnotes/1983075/" style="color:inherit">24 July 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1983075/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1983075</td>
+</tr>
+<tr data-date="1500900878">
+<td><a href="https://steamdb.info/patchnotes/1982615/" style="color:inherit">24 July 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">12:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1982615/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1982615</td>
+</tr>
+<tr data-date="1498138030">
+<td><a href="https://steamdb.info/patchnotes/1909156/" style="color:inherit">22 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1909156/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1909156</td>
+</tr>
+<tr data-date="1498136885">
+<td><a href="https://steamdb.info/patchnotes/1909096/" style="color:inherit">22 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1909096/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1909096</td>
+</tr>
+<tr data-date="1498128670">
+<td><a href="https://steamdb.info/patchnotes/1908787/" style="color:inherit">22 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">10:51</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1908787/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1908787</td>
+</tr>
+<tr data-date="1498128125">
+<td><a href="https://steamdb.info/patchnotes/1908755/" style="color:inherit">22 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">10:42</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1908755/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1908755</td>
+</tr>
+<tr data-date="1497092686">
+<td><a href="https://steamdb.info/patchnotes/1880120/" style="color:inherit">10 June 2017</a></td>
+<td>Sat</td>
+<td class="tabular-nums">11:04</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1880120/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1880120</td>
+</tr>
+<tr data-date="1497013726">
+<td><a href="https://steamdb.info/patchnotes/1879765/" style="color:inherit">9 June 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1879765/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1879765</td>
+</tr>
+<tr data-date="1496938122">
+<td><a href="https://steamdb.info/patchnotes/1877468/" style="color:inherit">8 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:08</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1877468/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1877468</td>
+</tr>
+<tr data-date="1496934795">
+<td><a href="https://steamdb.info/patchnotes/1877293/" style="color:inherit">8 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1877293/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1877293</td>
+</tr>
+<tr data-date="1496931500">
+<td><a href="https://steamdb.info/patchnotes/1877159/" style="color:inherit">8 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1877159/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1877159</td>
+</tr>
+<tr data-date="1496930962">
+<td><a href="https://steamdb.info/patchnotes/1877131/" style="color:inherit">8 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1877131/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1877131</td>
+</tr>
+<tr data-date="1496928380">
+<td><a href="https://steamdb.info/patchnotes/1877025/" style="color:inherit">8 June 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:26</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1877025/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1877025</td>
+</tr>
+<tr data-date="1496419544">
+<td><a href="https://steamdb.info/patchnotes/1863370/" style="color:inherit">2 June 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:05</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1863370/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1863370</td>
+</tr>
+<tr data-date="1496247580">
+<td><a href="https://steamdb.info/patchnotes/1857712/" style="color:inherit">31 May 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">16:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1857712/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1857712</td>
+</tr>
+<tr data-date="1496243238">
+<td><a href="https://steamdb.info/patchnotes/1857502/" style="color:inherit">31 May 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">15:07</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1857502/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1857502</td>
+</tr>
+<tr data-date="1496238892">
+<td><a href="https://steamdb.info/patchnotes/1857321/" style="color:inherit">31 May 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:54</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1857321/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1857321</td>
+</tr>
+<tr data-date="1494947958">
+<td><a href="https://steamdb.info/patchnotes/1825336/" style="color:inherit">16 May 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">15:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1825336/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1825336</td>
+</tr>
+<tr data-date="1494862161">
+<td><a href="https://steamdb.info/patchnotes/1822752/" style="color:inherit">15 May 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:29</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1822752/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1822752</td>
+</tr>
+<tr data-date="1494594975">
+<td><a href="https://steamdb.info/patchnotes/1817899/" style="color:inherit">12 May 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:16</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1817899/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1817899</td>
+</tr>
+<tr data-date="1494517954">
+<td><a href="https://steamdb.info/patchnotes/1815597/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1815597/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1815597</td>
+</tr>
+<tr data-date="1494514370">
+<td><a href="https://steamdb.info/patchnotes/1815420/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1815420/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1815420</td>
+</tr>
+<tr data-date="1494512630">
+<td><a href="https://steamdb.info/patchnotes/1815181/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1815181/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1815181</td>
+</tr>
+<tr data-date="1494512371">
+<td><a href="https://steamdb.info/patchnotes/1815338/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1815338/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1815338</td>
+</tr>
+<tr data-date="1494508698">
+<td><a href="https://steamdb.info/patchnotes/1741794/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:18</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1741794/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1741794</td>
+</tr>
+<tr data-date="1494508342">
+<td><a href="https://steamdb.info/patchnotes/1814636/" style="color:inherit">11 May 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">13:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1814636/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1814636</td>
+</tr>
+<tr data-date="1491572298">
+<td><a href="https://steamdb.info/patchnotes/1741704/" style="color:inherit">7 April 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:38</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1741704/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1741704</td>
+</tr>
+<tr data-date="1490362052">
+<td><a href="https://steamdb.info/patchnotes/1712686/" style="color:inherit">24 March 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">13:27</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1712686/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1712686</td>
+</tr>
+<tr data-date="1490287854">
+<td><a href="https://steamdb.info/patchnotes/1710511/" style="color:inherit">23 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:50</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1710511/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1710511</td>
+</tr>
+<tr data-date="1490283409">
+<td><a href="https://steamdb.info/patchnotes/1710283/" style="color:inherit">23 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">15:36</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1710283/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1710283</td>
+</tr>
+<tr data-date="1490280828">
+<td><a href="https://steamdb.info/patchnotes/1710181/" style="color:inherit">23 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:53</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1710181/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1710181</td>
+</tr>
+<tr data-date="1490280515">
+<td><a href="https://steamdb.info/patchnotes/1710168/" style="color:inherit">23 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:48</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1710168/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1710168</td>
+</tr>
+<tr data-date="1489769709">
+<td><a href="https://steamdb.info/patchnotes/1698912/" style="color:inherit">17 March 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1698912/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1698912</td>
+</tr>
+<tr data-date="1489765073">
+<td><a href="https://steamdb.info/patchnotes/1698720/" style="color:inherit">17 March 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">15:37</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1698720/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1698720</td>
+</tr>
+<tr data-date="1488962855">
+<td><a href="https://steamdb.info/patchnotes/1677311/" style="color:inherit">8 March 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">08:47</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1677311/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1677311</td>
+</tr>
+<tr data-date="1488903183">
+<td><a href="https://steamdb.info/patchnotes/1675728/" style="color:inherit">7 March 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">16:13</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1675728/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1675728</td>
+</tr>
+<tr data-date="1488884954">
+<td><a href="https://steamdb.info/patchnotes/1675030/" style="color:inherit">7 March 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">11:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1675030/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1675030</td>
+</tr>
+<tr data-date="1488878361">
+<td><a href="https://steamdb.info/patchnotes/1674805/" style="color:inherit">7 March 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">09:19</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1674805/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1674805</td>
+</tr>
+<tr data-date="1488821064">
+<td><a href="https://steamdb.info/patchnotes/1672995/" style="color:inherit">6 March 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">17:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1672995/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1672995</td>
+</tr>
+<tr data-date="1488816872">
+<td><a href="https://steamdb.info/patchnotes/1672840/" style="color:inherit">6 March 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">16:14</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1672840/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1672840</td>
+</tr>
+<tr data-date="1488812638">
+<td><a href="https://steamdb.info/patchnotes/1672671/" style="color:inherit">6 March 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">15:03</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1672671/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1672671</td>
+</tr>
+<tr data-date="1488808963">
+<td><a href="https://steamdb.info/patchnotes/1672549/" style="color:inherit">6 March 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">14:02</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1672549/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1672549</td>
+</tr>
+<tr data-date="1488796667">
+<td><a href="https://steamdb.info/patchnotes/1672182/" style="color:inherit">6 March 2017</a></td>
+<td>Mon</td>
+<td class="tabular-nums">10:37</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1672182/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1672182</td>
+</tr>
+<tr data-date="1488474742">
+<td><a href="https://steamdb.info/patchnotes/1666441/" style="color:inherit">2 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:12</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1666441/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1666441</td>
+</tr>
+<tr data-date="1488470996">
+<td><a href="https://steamdb.info/patchnotes/1666293/" style="color:inherit">2 March 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">16:09</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1666293/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1666293</td>
+</tr>
+<tr data-date="1488391084">
+<td><a href="https://steamdb.info/patchnotes/1664113/" style="color:inherit">1 March 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">17:58</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1664113/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1664113</td>
+</tr>
+<tr data-date="1488375254">
+<td><a href="https://steamdb.info/patchnotes/1663516/" style="color:inherit">1 March 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">13:34</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1663516/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1663516</td>
+</tr>
+<tr data-date="1488292228">
+<td><a href="https://steamdb.info/patchnotes/1661196/" style="color:inherit">28 February 2017</a></td>
+<td>Tue</td>
+<td class="tabular-nums">14:30</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1661196/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1661196</td>
+</tr>
+<tr data-date="1487957099">
+<td><a href="https://steamdb.info/patchnotes/1654541/" style="color:inherit">24 February 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">17:24</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1654541/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1654541</td>
+</tr>
+<tr data-date="1487954291">
+<td><a href="https://steamdb.info/patchnotes/1654422/" style="color:inherit">24 February 2017</a></td>
+<td>Fri</td>
+<td class="tabular-nums">16:38</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1654422/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1654422</td>
+</tr>
+<tr data-date="1487869456">
+<td><a href="https://steamdb.info/patchnotes/1651835/" style="color:inherit">23 February 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">17:04</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1651835/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1651835</td>
+</tr>
+<tr data-date="1487861869">
+<td><a href="https://steamdb.info/patchnotes/1651538/" style="color:inherit">23 February 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:57</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1651538/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1651538</td>
+</tr>
+<tr data-date="1487861525">
+<td><a href="https://steamdb.info/patchnotes/1651521/" style="color:inherit">23 February 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:52</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1651521/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1651521</td>
+</tr>
+<tr data-date="1487859811">
+<td><a href="https://steamdb.info/patchnotes/1651467/" style="color:inherit">23 February 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">14:23</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1651467/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1651467</td>
+</tr>
+<tr data-date="1487849288">
+<td><a href="https://steamdb.info/patchnotes/1651079/" style="color:inherit">23 February 2017</a></td>
+<td>Thu</td>
+<td class="tabular-nums">11:28</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1651079/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1651079</td>
+</tr>
+<tr data-date="1487786151">
+<td><a href="https://steamdb.info/patchnotes/1649040/" style="color:inherit">22 February 2017</a></td>
+<td>Wed</td>
+<td class="tabular-nums">17:55</td>
+<td>
+<a href="https://steamdb.info/patchnotes/1649040/" class="i">No title</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>1649040</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script nonce="" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" src="466560_files/jquery.js"></script>
+<script nonce="">
+(function()
+{
+const clear = document.getElementById( 'js-clear-filter' );
+const label = document.getElementById( 'js-heatmap-label' );
+const help = document.getElementById( 'js-heatmap-help' );
+clear.addEventListener( 'click', function( e )
+{
+clear.hidden = true;
+$( '#js-builds tr' ).each( function()
+{
+this.hidden = false;
+} );
+e.preventDefault();
+} );
+$( '#builds-heatmap .cell' ).on( 'click', function()
+{
+const hour = this.cellIndex - 1;
+const dayOfWeek = this.parentNode.rowIndex - 1;
+$( '#js-builds tr' ).each( function()
+{
+const date = new Date( this.dataset.date * 1000 );
+const day = ( date.getUTCDay() + 6 ) % 7;
+this.hidden = date.getUTCHours() !== hour || day !== dayOfWeek;
+} );
+clear.hidden = false;
+} ).on( 'mouseenter', function()
+{
+label.textContent = this.getAttribute( 'aria-label' ) + '. Click to filter.';
+} ).on( 'mouseleave', function()
+{
+label.innerHTML = '&nbsp;';
+} );
+$( '#builds-heatmap .cell-day' ).on( 'click', function()
+{
+const dayOfWeek = this.parentNode.rowIndex - 1;
+$( '#js-builds tr' ).each( function()
+{
+const date = new Date( this.dataset.date * 1000 );
+const day = ( date.getUTCDay() + 6 ) % 7;
+this.hidden = day !== dayOfWeek;
+} );
+clear.hidden = false;
+} );
+$( '#builds-heatmap .cell-hour' ).on( 'click', function()
+{
+const hour = this.cellIndex - 1;
+$( '#js-builds tr' ).each( function()
+{
+const date = new Date( this.dataset.date * 1000 );
+this.hidden = date.getUTCHours() !== hour;
+} );
+clear.hidden = false;
+} );
+}());
+</script>
+</div>
+</div>
+<a href="https://steamdb.info/donate/" class="welding-torch hide-small">
+<span>SteamDB has been running ad-free since 2012.<br><b>Find out how you can contribute.</b></span>
+<svg version="1.1" width="32" height="32" viewBox="0 0 16 16" class="octicon octicon-chevron-right" aria-hidden="true"><path fill-rule="evenodd" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path></svg>
+</a>
+<div class="footer" role="contentinfo" id="steamdb-org" itemscope="" itemtype="http://schema.org/Organization" itemprop="publisher">
+<meta itemprop="name" content="SteamDB">
+<meta itemprop="url" content="https://steamdb.info/">
+<span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://steamdb.info/static/logos/512px.png">
+<meta itemprop="width" content="512">
+<meta itemprop="height" content="512">
+</span>
+<div class="footer-container">
+<div class="footer-menu hide-small">
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-info" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg> About</li>
+<li><a href="https://steamdb.info/blog/">Blog</a></li>
+<li><a href="https://steamdb.info/discord/">Discord</a></li>
+<li><a href="https://steamdb.info/faq/">FAQ &amp; help</a></li>
+<li><a href="https://steamdb.info/donate/">Donate &amp; contribute</a></li>
+<li><a href="https://steamdb.info/extension/">Browser extension</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-search" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"></path></svg> Tools</li>
+<li><a href="https://steamdb.info/sales/">Sales</a></li>
+<li><a href="https://steamdb.info/graph/">Charts</a></li>
+<li><a href="https://steamdb.info/calculator/">Calculator</a></li>
+<li><a href="https://steamdb.info/patchnotes/">Patch notes</a></li>
+<li><a href="https://steamdb.info/instantsearch/">Instant search</a></li>
+<li><a href="https://steamdb.info/sales/history/">When is next sale?</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-sync" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.5a5.487 5.487 0 00-4.131 1.869l1.204 1.204A.25.25 0 014.896 6H1.25A.25.25 0 011 5.75V2.104a.25.25 0 01.427-.177l1.38 1.38A7.001 7.001 0 0114.95 7.16a.75.75 0 11-1.49.178A5.501 5.501 0 008 2.5zM1.705 8.005a.75.75 0 01.834.656 5.501 5.501 0 009.592 2.97l-1.204-1.204a.25.25 0 01.177-.427h3.646a.25.25 0 01.25.25v3.646a.25.25 0 01-.427.177l-1.38-1.38A7.001 7.001 0 011.05 8.84a.75.75 0 01.656-.834z"></path></svg> Tracking</li>
+<li><a href="https://steamdb.info/apps/">Apps</a></li>
+<li><a href="https://steamdb.info/subs/">Packages</a></li>
+<li><a href="https://steamdb.info/bundles/">Bundles</a></li>
+<li><a href="https://steamdb.info/history/">History</a></li>
+<li><a href="https://steamdb.info/pricechanges/">Price changes</a></li>
+<li><a href="https://steamdb.info/upcoming/free/">Free promotions</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-database" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 3.5c0-.133.058-.318.282-.55.227-.237.592-.484 1.1-.708C4.899 1.795 6.354 1.5 8 1.5c1.647 0 3.102.295 4.117.742.51.224.874.47 1.101.707.224.233.282.418.282.551 0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 5.205 9.646 5.5 8 5.5c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707-.224-.233-.282-.418-.282-.551zM1 3.5c0-.626.292-1.165.7-1.59.406-.422.956-.767 1.579-1.041C4.525.32 6.195 0 8 0c1.805 0 3.475.32 4.722.869.622.274 1.172.62 1.578 1.04.408.426.7.965.7 1.591v9c0 .626-.292 1.165-.7 1.59-.406.422-.956.767-1.579 1.041C11.476 15.68 9.806 16 8 16c-1.805 0-3.475-.32-4.721-.869-.623-.274-1.173-.62-1.579-1.04-.408-.426-.7-.965-.7-1.591v-9zM2.5 8V5.724c.241.15.503.286.779.407C4.525 6.68 6.195 7 8 7c1.805 0 3.475-.32 4.722-.869.275-.121.537-.257.778-.407V8c0 .133-.058.318-.282.55-.227.237-.592.484-1.1.708C11.101 9.705 9.646 10 8 10c-1.647 0-3.102-.295-4.117-.742-.51-.224-.874-.47-1.101-.707C2.558 8.318 2.5 8.133 2.5 8zm0 2.225V12.5c0 .133.058.318.282.55.227.237.592.484 1.1.708 1.016.447 2.471.742 4.118.742 1.647 0 3.102-.295 4.117-.742.51-.224.874-.47 1.101-.707.224-.233.282-.418.282-.551v-2.275c-.241.15-.503.285-.778.406-1.247.549-2.917.869-4.722.869-1.805 0-3.475-.32-4.721-.869a6.236 6.236 0 01-.779-.406z"></path></svg> Database</li>
+<li><a href="https://steamdb.info/tags/">User tags</a></li>
+<li><a href="https://steamdb.info/tech/">Technologies &amp; built with</a></li>
+<li><a href="https://steamdb.info/upcoming/">Upcoming releases</a></li>
+<li><a href="https://steamdb.info/upcoming/mostfollowed/">Most followed upcoming</a></li>
+<li><a href="https://steamdb.info/calendar/">Release calendar</a></li>
+<li><a href="https://steamdb.info/stats/releases/">Game releases by year</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-number" aria-hidden="true"><path fill-rule="evenodd" d="M5.604.089A.75.75 0 016 .75v4.77h.711a.75.75 0 110 1.5H3.759a.75.75 0 110-1.5H4.5V2.15l-.334.223a.75.75 0 01-.832-1.248l1.5-1a.75.75 0 01.77-.037zM9 4.75A.75.75 0 019.75 4h4a.75.75 0 01.53 1.28l-1.89 1.892c.312.076.604.18.867.319.742.391 1.244 1.063 1.244 2.005 0 .653-.231 1.208-.629 1.627-.386.408-.894.653-1.408.777-1.01.243-2.225.063-3.124-.527a.75.75 0 01.822-1.254c.534.35 1.32.474 1.951.322.306-.073.53-.201.67-.349.129-.136.218-.32.218-.596 0-.308-.123-.509-.444-.678-.373-.197-.98-.318-1.806-.318a.75.75 0 01-.53-1.28l1.72-1.72H9.75A.75.75 0 019 4.75zm-3.587 5.763c-.35-.05-.77.113-.983.572a.75.75 0 11-1.36-.632c.508-1.094 1.589-1.565 2.558-1.425 1 .145 1.872.945 1.872 2.222 0 1.433-1.088 2.192-1.79 2.681-.308.216-.571.397-.772.573H7a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75c0-.69.3-1.211.67-1.61.348-.372.8-.676 1.15-.92.8-.56 1.18-.904 1.18-1.474 0-.473-.267-.69-.587-.737z"></path></svg> Rankings</li>
+<li><a href="https://steamdb.info/stats/gameratings/">Top rated games</a></li>
+<li><a href="https://steamdb.info/badge/13/">Top game owners</a></li>
+<li><a href="https://steamdb.info/stats/toplevels/">Top profile levels</a></li>
+<li><a href="https://steamdb.info/topsellers/">Top selling games</a></li>
+<li><a href="https://steamdb.info/stats/mostfollowed/">Most followed games</a></li>
+<li><a href="https://steamdb.info/stats/mostwished/">Most wishlisted games</a></li>
+<li><a href="https://steamdb.info/badges/">Profile badges</a></li>
+</ul>
+<ul>
+<li class="navigation-heading"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-person" aria-hidden="true"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg> Account</li>
+<li><a href="https://steamdb.info/watching/1036345125/">Watch list</a></li>
+<li><a href="https://steamdb.info/calculator/76561198996610853/">Your page</a></li>
+<li><a href="https://steamdb.info/freepackages/">Free packages</a></li>
+<li><a href="https://steamdb.info/user/">Settings</a></li>
+<li><a href="https://steamdb.info/signout/">Sign out</a></li>
+<li>&nbsp;</li>
+<li><a href="https://steamstat.us/">Steam Status</a></li>
+<li><a href="https://steamapi.xpaw.me/">Steam Web API</a></li>
+</ul>
+</div>
+<div class="footer-copyright">
+<div>
+<p>
+SteamDB is a hobby project and is not affiliated with Valve or Steam. All times on the site are UTC.
+<a href="https://steamdb.info/faq/#what-steamdb-is-not">Fair use disclaimer</a> ·
+<a href="https://steamdb.info/faq/#privacy">Privacy</a>
+</p>
+<p>Steam and the Steam logo are trademarks of Valve Corporation. All other trademarks are property of their respective owners.</p>
+</div>
+<div class="footer-buttons">
+<a class="btn-social tooltipped tooltipped-n" aria-label="Discord" href="https://steamdb.info/discord/" rel="nofollow">
+<svg viewBox="0 0 16 16" width="24" height="24" class="btn-social-icon" aria-hidden="true">
+<path d="M13.54 2.9a13.2 13.2 0 00-3.25-1c-.02 0-.04 0-.05.02-.15.25-.3.58-.41.83a12.18 12.18 0 00-3.66 0 8.4 8.4 0 00-.41-.83.05.05 0 00-.05-.02 13.16 13.16 0 00-3.28 1.03 13.5 13.5 0 00-2.34 9.14c1.37 1 2.7 1.61 4 2.02.01 0 .04 0 .05-.02.3-.42.58-.86.82-1.33a.05.05 0 00-.03-.07 8.76 8.76 0 01-1.25-.6.05.05 0 010-.08l.24-.2a.05.05 0 01.05 0 9.46 9.46 0 008.05 0h.05l.25.2c.03.02.02.07 0 .09-.4.23-.82.43-1.26.59a.05.05 0 00-.02.07c.24.47.51.91.81 1.33.02.02.04.03.06.02a13.23 13.23 0 004.02-2.06 13.41 13.41 0 00-2.39-9.12zm-8.2 7.31c-.78 0-1.43-.72-1.43-1.6 0-.9.64-1.62 1.44-1.62.8 0 1.45.73 1.43 1.61 0 .89-.63 1.61-1.43 1.61zm5.32 0c-.79 0-1.43-.72-1.43-1.6 0-.9.63-1.62 1.43-1.62.81 0 1.45.73 1.44 1.61 0 .89-.63 1.61-1.44 1.61z"></path>
+</svg>
+</a>
+<a class="btn-social tooltipped tooltipped-n" aria-label="Twitter" href="https://twitter.com/intent/follow?screen_name=SteamDB" itemprop="sameAs">
+<svg viewBox="0 0 32 32" width="24" height="24" class="btn-social-icon" aria-hidden="true">
+<path d="M31.993 6.077c-1.177.523-2.44.876-3.77 1.033 1.355-.812 2.396-2.098 2.887-3.63-1.27.75-2.673 1.3-4.168 1.592C25.744 3.797 24.038 3 22.15 3c-3.626 0-6.563 2.938-6.563 6.563 0 .514.057 1.016.17 1.496C10.3 10.784 5.464 8.17 2.226 4.2c-.564.97-.888 2.098-.888 3.3 0 2.28 1.158 4.287 2.918 5.465-1.075-.035-2.087-.33-2.972-.82v.08c0 3.182 2.26 5.835 5.264 6.438-.55.15-1.13.23-1.73.23-.423 0-.833-.04-1.233-.117.834 2.606 3.26 4.504 6.13 4.558-2.245 1.76-5.075 2.81-8.15 2.81-.53 0-1.053-.03-1.566-.09C2.906 27.913 6.356 29 10.063 29c12.072 0 18.675-10 18.675-18.675 0-.284-.008-.568-.02-.85 1.283-.925 2.395-2.08 3.276-3.398z"></path>
+</svg>
+</a>
+<a class="btn-social tooltipped tooltipped-n" aria-label="GitHub" href="https://github.com/SteamDatabase" itemprop="sameAs">
+<svg viewBox="0 0 16 16" width="24" height="24" class="btn-social-icon" aria-hidden="true">
+<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+</svg>
+</a>
+<a class="btn-social tooltipped tooltipped-n" aria-label="Steam Group" href="https://steamcommunity.com/groups/steamdb" itemprop="sameAs">
+<svg viewBox="0 0 16 16" width="24" height="24" class="btn-social-icon" aria-hidden="true">
+<path d="M8 0a8 8 0 00-8 7.47c.07.1.13.21.18.32l4.15 1.67a2.2 2.2 0 011.31-.36l1.97-2.8v-.04c0-1.65 1.37-3 3.05-3a3.03 3.03 0 013.05 3 3.03 3.03 0 01-3.12 3l-2.81 1.97c0 .3-.05.6-.17.9a2.25 2.25 0 01-4.23-.37L.4 10.56A8.01 8.01 0 108 0zm2.66 4.27c-1.12 0-2.03.9-2.03 2s.91 1.99 2.03 1.99c1.12 0 2.03-.9 2.03-2s-.9-2-2.03-2zm0 .5c.85 0 1.53.66 1.53 1.49s-.68 1.5-1.53 1.5c-.84 0-1.52-.67-1.52-1.5s.68-1.5 1.52-1.5zM5.57 9.6c-.22 0-.43.04-.62.11l1.02.42c.65.26.95.99.68 1.62-.27.63-1 .93-1.65.67l-1-.4a1.73 1.73 0 003.13-.08c.18-.42.18-.88.01-1.3A1.69 1.69 0 005.57 9.6z"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+<div id="js-notifications">
+<noscript class="toast">
+<div class="toast-body">For SteamDB to function correctly, JavaScript should be enabled.</div>
+</noscript>
+</div>
+<div id="js-hover" hidden=""></div>
+<script nonce="" integrity="sha512-MAg/hTdR8U+kOudY89DwI6sKIAGin0BK5KRuoDUhDstXCYCWtaQGWkkJFBpzJouGMEbJAuXQCmmbCfEGB/okAg==" src="466560_files/footer.js" defer="defer"></script><script nonce="" integrity="sha512-YcRy+3RR7jrZWuoI8SNvI22gl+xU4fHzhYAtbfjdwF+3KeynSNMx0B1v4pViRycOFeF1bl8yZiQhVpWxy8COgQ==" src="466560_files/hover.js" defer="defer"></script><script nonce="" integrity="sha512-1ybGGSXu45WDVLpQVF82WqtnS2bxLx/FPHJTns9Vs3s6fB+Z9IRphuQHYGo6iv2bFbVXVRuQ2xNJLdKPOMw+bw==" src="466560_files/toast.js" defer="defer"></script>
+
+</body></html>
