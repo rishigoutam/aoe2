@@ -136,7 +136,7 @@ dmypy.json
 presentation.pptx
 
 # large dataset files
-data/match_players.csv
-data/match_players_big.csv
-data/matches.csv
-data/matches_big.csv
+data/aoe2net/match_players.csv
+data/aoe2net/match_players_big.csv
+data/aoe2net/matches.csv
+data/aoe2net/matches_big.csv

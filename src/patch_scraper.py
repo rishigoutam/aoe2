@@ -1,27 +1,29 @@
 #! /opt/anaconda3/bin/python
 
 """
-Scrapes Patch Information for AoE:HD and AoE:DE
-Age of Empires has patches that consist of balance changes, bug fixes, new civ additions, etc. Here, we attempt to scrape patch information.
-AoE:HD does not have main patches labeled, so we don't have major versions unlike for AoE:DE
+Scrapes Patch Counts Info for list of RTS games we are analyzing
+
+Scrapes Detailed Patch Information for AoE:HD and AoE:DE
+    Age of Empires has patches that consist of balance changes, bug fixes, new civ additions, etc. Here, we attempt to scrape patch information.
+    AoE:HD does not have main patches labeled, so we don't have major versions unlike for AoE:DE
+
+Outputs generated patch counts and detailed patch info files to {out_dir}
+
+Pre-requisite:
+    Unfortunately, it looks like steamdb.info looks for JS to be enabled.
+    Download the steamdb info using a browser and save to {inputs_dir}
+    So instead of scraping a live site, we will download the html locally and scrape that instead to get patch information
+    {game}_patch_url = f'https://steamdb.info/app/{game_steam_id}/patchnotes/'
 """
 
-# Pre-requisite:
-# Download the below websites using a browser
-# Unfortunately, it looks like steamdb.info looks for JS to be enabled.
-# So instead of scraping a live site, we will download the html locally and scrape that instead to get patch information
-# Save to our inputs/ directory
-# de_steam_id = 813780
-# hd_steam_id = 221380
-# de_patch_url = f'https://steamdb.info/app/{de_steam_id}/patchnotes/'
-# hd_patch_url = f'https://steamdb.info/app/{hd_steam_id}/patchnotes/'
 
 from bs4 import BeautifulSoup as Soup
 import csv
 import os
 
 inputs_dir = 'inputs/'
-out_dir = 'data/'
+data_dir = 'data/'
+out_dir = f'{data_dir}gen/'
 
 # Steam Game App IDs
 # hardcoded names also used in rts_player_counts TODO fix
