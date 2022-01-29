@@ -23,6 +23,7 @@ import os
 inputs_dir = 'inputs'
 
 # Steam Game App IDs
+# hardcoded names also used in rts_player_counts TODO fix
 games = dict()
 games[933110] = ['AoE3', None]
 games[459220] = ['halo-wars', None]
@@ -30,7 +31,7 @@ games[1466860] = ['AoE4', None]
 games[1213210] = ['command-and-conquer', None]
 games[466560] = ['northguard', None]
 games[287450] = ['rise-of-nations', None]
-games[594570] = ['total-war-warhammer', None]
+games[594570] = ['total-war-warhammer-ii', None]
 games[231430] = ['company-of-heroes', None]
 games[40950] = ['stronghold', None]
 games[813780] = ['AoE2-DE', None]
