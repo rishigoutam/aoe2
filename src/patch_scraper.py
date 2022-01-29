@@ -21,8 +21,8 @@ from bs4 import BeautifulSoup as Soup
 import csv
 import os
 
-inputs_dir = 'inputs/'
 data_dir = 'data/'
+inputs_dir = f'{data_dir}steamdb/game-updates/'
 out_dir = f'{data_dir}gen/'
 
 # Steam Game App IDs
