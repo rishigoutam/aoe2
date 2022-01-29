@@ -133,6 +133,7 @@ dmypy.json
 
 # pptx
 ~$presentation.pptx
+presentation.pptx
 
 # large dataset files
 data/match_players.csv
