@@ -133,7 +133,6 @@ dmypy.json
 
 # pptx
 nycdsa-project/~$presentation.pptx
-nycdsa-project/presentation.pptx
 
 # large dataset files
 data/aoe2net/match_players.csv
