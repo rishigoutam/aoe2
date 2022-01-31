@@ -15,18 +15,16 @@ All code and presentation material available at [github.com/rishigoutam/aoe2](gi
 #### Data Analysis
 * `src/` contains all notebooks used for data analysis and python files to process scraping 
 
-    - `rts_player_counts` analyzes top 11 RTS games in terms of frequency of game updates and player counts
-    - `aoe_player_count_analysis` compares the AoE2:HD vs AoE2:DE game data
-    - `aoe2de_analysis` looks into balance for matches played in AoE2:DE
-    - `patch_scraper` scrapes game update data (patches) from steamdb.info
+    - ↳ `rts_player_counts` analyzes top 11 RTS games in terms of frequency of game updates and player counts
+    - ↳ `aoe_player_count_analysis` compares the AoE2:HD vs AoE2:DE game data
+    - ↳ `aoe2de_analysis` looks into balance for matches played in AoE2:DE
+    - ↳ `patch_scraper` scrapes game update data (patches) from steamdb.info
 
 #### Data
 * `data/aoe2net/` has the match and players datasets from Kaggle
 * `data/steamdb`
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ↪ `/charts/` has player count data from steamdb.info
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ↪ `/game-updates/` has game update data from steamdb.info
+  * ↳ `/charts/` has player count data from steamdb.info 
+  * ↳ `/game-updates/` has game update data from steamdb.info
 * `data/gen/` has notebook-generated game patch data and detailed game patch data for AoEII:DE
 
 #### Graphs and CSVs
